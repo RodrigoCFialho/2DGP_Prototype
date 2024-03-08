@@ -26,13 +26,21 @@ public class ButtonController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        NoteController = collision.gameObject.GetComponent<NoteController>();
+        NoteController = other.gameObject.GetComponent<NoteController>();
 
         if (NoteController != null)
         {
             canHitNote = true;
+            print("^");
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        canHitNote = false;
+        NoteController.Dismiss();
+        print("Miss");
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class NoteController : MonoBehaviour
 {
     [SerializeField]
-    private float speed = 3f;
+    private float speed = 2f;
 
     private Rigidbody2D myRigidbody2D = null;
     
@@ -13,6 +13,12 @@ public class NoteController : MonoBehaviour
     {
         myRigidbody2D = GetComponent<Rigidbody2D>();
     }
+
+    private void Start()
+    {
+           
+    }
+
     private void FixedUpdate()
     {
         myRigidbody2D.velocity = new Vector2(-speed, myRigidbody2D.velocity.y);   
