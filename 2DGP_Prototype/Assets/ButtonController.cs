@@ -8,6 +8,8 @@ public class ButtonController : MonoBehaviour
 
     private bool canHitNote = false;
 
+    private bool wasHit = false;
+
     NoteController NoteController = null;
 
 
@@ -20,9 +22,11 @@ public class ButtonController : MonoBehaviour
     {
         float verticalInput = Input.GetAxisRaw("Vertical");
 
-        if (verticalInput > 0f && canHitNote)
+        if (verticalInput > 0f && canHitNote && NoteController != null)
         {
+            wasHit = true;
             NoteController.Dismiss();
+            print("Hit");
         }
     }
 
@@ -39,8 +43,11 @@ public class ButtonController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        canHitNote = false;
-        NoteController.Dismiss();
-        print("Miss");
+        if (!wasHit)
+        {
+            canHitNote = false;
+            NoteController.Dismiss();
+            print("Miss");
+        }
     }
 }

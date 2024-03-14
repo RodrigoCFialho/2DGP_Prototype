@@ -8,6 +8,8 @@ public class NoteController : MonoBehaviour
     private float speed = 2f;
 
     private Rigidbody2D myRigidbody2D = null;
+
+    private bool startGame = false;
     
     private void Awake()
     {
@@ -16,12 +18,23 @@ public class NoteController : MonoBehaviour
 
     private void Start()
     {
-           
+        
+    }
+
+    private void Update()
+    {
+        if (!startGame && Input.GetKeyDown(KeyCode.E))
+        {
+            startGame = true;
+        }
     }
 
     private void FixedUpdate()
     {
-        myRigidbody2D.velocity = new Vector2(-speed, myRigidbody2D.velocity.y);   
+        if (startGame)
+        {
+            myRigidbody2D.velocity = new Vector2(-speed, myRigidbody2D.velocity.y);
+        }
     }
 
     public void Dismiss()
