@@ -64,6 +64,7 @@
     <Compile Include="Assets\NoteController.cs" />
     <Compile Include="Assets\Scripts\Interfaces\InputSystem.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IHitable.cs" />
+    <Compile Include="Assets\GameManager.cs" />
     <Compile Include="Assets\ButtonController.cs" />
   </ItemGroup>
   <ItemGroup>
