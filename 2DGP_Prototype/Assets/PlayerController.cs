@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,6 +34,6 @@ public class PlayerController : MonoBehaviour
 
         //animations
         myAnimator.SetFloat("VerticalSpeed", myRigidbody2D.velocity.y);
-        myAnimator.SetFloat("VerticalSpeed", myRigidbody2D.velocity.x);
+        myAnimator.SetFloat("HorizontalSpeed", myRigidbody2D.velocity.x);
     }
 }
