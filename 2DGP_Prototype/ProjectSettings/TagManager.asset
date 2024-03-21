@@ -39,14 +39,14 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: New Layer 1
+  - name: Background
     uniqueID: 2431858959
+    locked: 0
+  - name: Level Background
+    uniqueID: 2934352817
     locked: 0
   - name: Circle
     uniqueID: 640898435
-    locked: 0
-  - name: New Layer 3
-    uniqueID: 2934352817
     locked: 0
   - name: Default
     uniqueID: 0

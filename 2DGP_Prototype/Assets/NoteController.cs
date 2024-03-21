@@ -5,17 +5,21 @@ using UnityEngine;
 
 public class NoteController : MonoBehaviour
 {
+    private Rigidbody2D myRigidbody2D = null;
+
     [SerializeField]
     private float speed = 2f;
 
-    private Rigidbody2D myRigidbody2D = null;
-    
+    public bool canHitNote = false;
+
+    public bool wasHit = false;
+
     private void Awake()
     {
         myRigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    public void Move()
+    private void Start()
     {
         myRigidbody2D.velocity = new Vector2(-speed, myRigidbody2D.velocity.y);
     }

@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,13 +7,18 @@ public class GameManager : MonoBehaviour
     private GameObject RhythmGameEnabler = null;
 
     [SerializeField]
-    private NoteController NoteController = null;
+    private GameObject Player = null;
+
+    [SerializeField]
+    private NoteSpawner NoteSpawner = null;
 
     private bool startGame = false;
 
     private void Start()
     {
         RhythmGameEnabler.SetActive(false);
+        Player.SetActive(true);
+        startGame = false;
     }
 
     private void Update()
@@ -24,7 +28,16 @@ public class GameManager : MonoBehaviour
             startGame = true;
 
             RhythmGameEnabler.SetActive(true);
-            NoteController.Move();
+            Player.SetActive(false);
+            NoteSpawner.StartSpawner();
+        }
+
+        if (startGame && Input.GetKeyDown(KeyCode.R))
+        {
+            startGame = false;
+
+            RhythmGameEnabler.SetActive(false);
+            Player.SetActive(true);
         }
     }
 }

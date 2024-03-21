@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\PlayerController.cs" />
     <Compile Include="Assets\NoteController.cs" />
+    <Compile Include="Assets\NoteSpawner.cs" />
     <Compile Include="Assets\Scripts\Interfaces\InputSystem.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IHitable.cs" />
     <Compile Include="Assets\GameManager.cs" />
@@ -922,6 +923,10 @@
       <Project>{6D8EE22D-F773-7A9C-115E-5CBA58DD6901}</Project>
       <Name>PsdPlugin</Name>
     </ProjectReference>
+    <ProjectReference Include="com.unity.cinemachine.editor.csproj">
+      <Project>{17F4349B-7C63-12AE-C1B2-8966CAA87A15}</Project>
+      <Name>com.unity.cinemachine.editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Burst.Editor.csproj">
       <Project>{C0196C5D-8448-65C7-A7F0-5BC68D35B314}</Project>
       <Name>Unity.Burst.Editor</Name>
@@ -1065,6 +1070,10 @@
     <ProjectReference Include="Unity.2D.SpriteShape.Editor.csproj">
       <Project>{F8875AC0-8436-F0E3-70F3-36483AF0F4D6}</Project>
       <Name>Unity.2D.SpriteShape.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Cinemachine.csproj">
+      <Project>{2A641FBB-7A1C-A29E-E832-E1FFB50008C0}</Project>
+      <Name>Cinemachine</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Animation.Editor.csproj">
       <Project>{81D1E130-B814-4CD6-331E-CA724A9110AE}</Project>
