@@ -21,9 +21,19 @@ public class NoteController : MonoBehaviour
 
     private void Start()
     {
+        // Make notes move to the lefts
         myRigidbody2D.velocity = new Vector2(-speed, myRigidbody2D.velocity.y);
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Dismiss();
+        }
+    }
+
+    // Destroy the Note
     public void Dismiss()
     {
         Destroy(gameObject);

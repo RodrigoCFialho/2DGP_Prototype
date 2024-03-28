@@ -4,21 +4,14 @@ using UnityEngine;
 
 public class ButtonController : MonoBehaviour
 {
-    private Rigidbody2D myRigidbody2D = null;
-
     NoteController NoteController = null;
-
-
-    private void Awake()
-    {
-        myRigidbody2D = GetComponent<Rigidbody2D>();
-    }
 
     private void Update()
     {
+        // Press W or ^ to hit the note
         float verticalInput = Input.GetAxisRaw("Vertical");
 
-        if (verticalInput > 0f && NoteController.canHitNote && NoteController != null)
+        if (NoteController != null && NoteController.canHitNote && verticalInput > 0f)
         {
             NoteController.wasHit = true;
             NoteController.Dismiss();
@@ -26,6 +19,7 @@ public class ButtonController : MonoBehaviour
         }
     }
 
+    // Note enters the collider and can now be hit
     private void OnTriggerEnter2D(Collider2D other)
     {
         NoteController = other.gameObject.GetComponent<NoteController>();
@@ -37,6 +31,7 @@ public class ButtonController : MonoBehaviour
         }
     }
 
+    // Note exits the collider and is dismissed
     private void OnTriggerExit2D(Collider2D other)
     {
         if (!NoteController.wasHit)

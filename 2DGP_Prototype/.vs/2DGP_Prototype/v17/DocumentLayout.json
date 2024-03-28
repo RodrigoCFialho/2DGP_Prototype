@@ -1,26 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\rodri\\Documents\\GitHub\\2D-Project-2024\\2DGP_Prototype\\",
+  "WorkspaceRootPath": "D:\\Github\\2DGP_Prototype\\2DGP_Prototype\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|C:\\Users\\rodri\\Documents\\GitHub\\2D-Project-2024\\2DGP_Prototype\\assets\\buttoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|solutionrelative:assets\\buttoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|c:\\users\\rodri\\documents\\github\\2d-project-2024\\2dgp_prototype\\assets\\notecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|D:\\Github\\2DGP_Prototype\\2DGP_Prototype\\assets\\notecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|solutionrelative:assets\\notecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|c:\\users\\rodri\\documents\\github\\2d-project-2024\\2dgp_prototype\\assets\\notespawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|solutionrelative:assets\\notespawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|C:\\Users\\rodri\\Documents\\GitHub\\2D-Project-2024\\2DGP_Prototype\\assets\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|C:\\Users\\rodri\\Documents\\GitHub\\2D-Project-2024\\2DGP_Prototype\\assets\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|solutionrelative:assets\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,70 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NoteSpawner.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\Documents\\GitHub\\2D-Project-2024\\2DGP_Prototype\\Assets\\NoteSpawner.cs",
-              "RelativeDocumentMoniker": "Assets\\NoteSpawner.cs",
-              "ToolTip": "C:\\Users\\rodri\\Documents\\GitHub\\2D-Project-2024\\2DGP_Prototype\\Assets\\NoteSpawner.cs",
-              "RelativeToolTip": "Assets\\NoteSpawner.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAwAoAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T16:13:44.04Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GameManager.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\Documents\\GitHub\\2D-Project-2024\\2DGP_Prototype\\Assets\\GameManager.cs",
-              "RelativeDocumentMoniker": "Assets\\GameManager.cs",
-              "ToolTip": "C:\\Users\\rodri\\Documents\\GitHub\\2D-Project-2024\\2DGP_Prototype\\Assets\\GameManager.cs",
-              "RelativeToolTip": "Assets\\GameManager.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwB8AAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T17:07:37.787Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PlayerController.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\Documents\\GitHub\\2D-Project-2024\\2DGP_Prototype\\Assets\\PlayerController.cs",
-              "RelativeDocumentMoniker": "Assets\\PlayerController.cs",
-              "ToolTip": "C:\\Users\\rodri\\Documents\\GitHub\\2D-Project-2024\\2DGP_Prototype\\Assets\\PlayerController.cs",
-              "RelativeToolTip": "Assets\\PlayerController.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T14:58:04.386Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "NoteController.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\Documents\\GitHub\\2D-Project-2024\\2DGP_Prototype\\Assets\\NoteController.cs",
+              "DocumentMoniker": "D:\\Github\\2DGP_Prototype\\2DGP_Prototype\\Assets\\NoteController.cs",
               "RelativeDocumentMoniker": "Assets\\NoteController.cs",
-              "ToolTip": "C:\\Users\\rodri\\Documents\\GitHub\\2D-Project-2024\\2DGP_Prototype\\Assets\\NoteController.cs",
+              "ToolTip": "D:\\Github\\2DGP_Prototype\\2DGP_Prototype\\Assets\\NoteController.cs",
               "RelativeToolTip": "Assets\\NoteController.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAKAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-14T13:51:47.633Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ButtonController.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\Documents\\GitHub\\2D-Project-2024\\2DGP_Prototype\\Assets\\ButtonController.cs",
-              "RelativeDocumentMoniker": "Assets\\ButtonController.cs",
-              "ToolTip": "C:\\Users\\rodri\\Documents\\GitHub\\2D-Project-2024\\2DGP_Prototype\\Assets\\ButtonController.cs",
-              "RelativeToolTip": "Assets\\ButtonController.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T13:36:43.519Z",
               "EditorCaption": ""
             }
           ]

@@ -19,11 +19,6 @@ public class PlayerController : MonoBehaviour
         myAnimator = GetComponent<Animator>();
     }
 
-    private void Update()
-    {
-        
-    }
-
     private void FixedUpdate()
     {
         // movement
@@ -32,7 +27,7 @@ public class PlayerController : MonoBehaviour
 
         myRigidbody2D.velocity = new Vector2(horizontalinput * speed, verticalinput * speed);
 
-        //animations
+        // animations
         myAnimator.SetFloat("VerticalSpeed", myRigidbody2D.velocity.y);
         myAnimator.SetFloat("HorizontalSpeed", myRigidbody2D.velocity.x);
     }
