@@ -463,6 +463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1807843739}
+  score: 0
   star1: {fileID: 585824899}
   star2: {fileID: 378005934}
   star3: {fileID: 2117005383}
@@ -1665,6 +1666,6 @@ SceneRoots:
   - {fileID: 1474064553}
   - {fileID: 206015241}
   - {fileID: 1824328415}
+  - {fileID: 359693011}
   - {fileID: 561168269}
   - {fileID: 657727182}
-  - {fileID: 359693011}

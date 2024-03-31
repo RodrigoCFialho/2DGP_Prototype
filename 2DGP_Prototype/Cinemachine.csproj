@@ -71,9 +71,9 @@
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.9.7\Runtime\Components\CinemachineBasicMultiChannelPerlin.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.9.7\Runtime\Timeline\CinemachineShotPlayable.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.9.7\Runtime\PostProcessing\CinemachineVolumeSettings.cs" />
-    <Compile Include="Library\PackageCache\com.unity.cinemachine@2.9.7\Runtime\ThirdParty\clipper.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.9.7\Runtime\Behaviours\CinemachineExternalCamera.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.9.7\Runtime\Core\GaussianFilter.cs" />
+    <Compile Include="Library\PackageCache\com.unity.cinemachine@2.9.7\Runtime\ThirdParty\clipper.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.9.7\Runtime\Components\CinemachineHardLockToTarget.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.9.7\Runtime\Behaviours\CinemachineCollider.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.9.7\Runtime\Core\CinemachineCore.cs" />
@@ -133,8 +133,8 @@
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.9.7\Runtime\Helpers\CinemachineTouchInputMapper.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.9.7\Runtime\Components\CinemachineSameAsFollowTarget.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.9.7\Runtime\Components\CinemachineComposer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.cinemachine@2.9.7\Runtime\Core\SignalSourceAsset.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.9.7\Runtime\Behaviours\CinemachineFollowZoom.cs" />
+    <Compile Include="Library\PackageCache\com.unity.cinemachine@2.9.7\Runtime\Core\SignalSourceAsset.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.9.7\Runtime\Core\NoiseSettings.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.9.7\Runtime\Core\AxisState.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.9.7\Runtime\Core\TargetPositionCache.cs" />
