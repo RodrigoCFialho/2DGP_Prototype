@@ -31,12 +31,6 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        // Iniciar o jogo de ritmo
-        if (!startGame && Input.GetKeyDown(KeyCode.E))
-        {
-            TurnOnLevel();
-        }
-
         // Desligar o jogo de ritmo e voltar para o level map
         if (startGame && Input.GetKeyDown(KeyCode.R))
         {
@@ -44,7 +38,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void TurnOnLevel()
+    // Iniciar o jogo de ritmo
+    public void TurnOnLevel()
     {
         startGame = true;
 
