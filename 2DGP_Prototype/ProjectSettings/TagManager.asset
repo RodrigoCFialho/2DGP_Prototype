@@ -42,12 +42,24 @@ TagManager:
   - name: Background
     uniqueID: 2431858959
     locked: 0
+  - name: Level Map Assets
+    uniqueID: 3008261075
+    locked: 0
   - name: Level Background
     uniqueID: 2934352817
     locked: 0
   - name: Circle
     uniqueID: 640898435
     locked: 0
+  - name: Notes
+    uniqueID: 1996515661
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 3865272933
+    locked: 0
+  - name: UI
+    uniqueID: 3353158137
     locked: 0

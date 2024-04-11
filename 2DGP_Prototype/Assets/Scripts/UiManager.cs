@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEditor.UIElements;
@@ -9,6 +10,19 @@ public class UiManager : MonoBehaviour
     // UI com percentagem de notas acertadas
     [SerializeField]
     private TextMeshProUGUI scoreText = null;
+
+    [SerializeField]
+    private GameObject goodText = null;
+
+    private bool isGoodTextActive = true;
+
+    [SerializeField]
+    private GameObject excellentText = null;
+
+    private bool isExcellentTextActive = true;
+
+    [SerializeField]
+    private float uiTime = 2f;
 
     [SerializeField]
     private float score = 0f;
@@ -45,12 +59,58 @@ public class UiManager : MonoBehaviour
 
     private void Start()
     {
+        DisableGoodText();
+        DisableExcellentText();
         // mudar o alpha (esparguete style)
         star1.color = lowAlphaColor;
         star2.color = lowAlphaColor;
         star3.color = lowAlphaColor;
 
         UpdateScore();
+    }
+
+    public void EnableGoodText()
+    {
+        goodText.SetActive(true);
+        isGoodTextActive = true;
+        StartCoroutine(UiTimer());
+    }
+
+    private IEnumerator UiTimer()
+    {
+        WaitForSeconds timetoWait = new WaitForSeconds(uiTime);
+        for (int i = 0; i >= 0; ++i)
+        {
+            yield return timetoWait;
+            if (isGoodTextActive)
+            {
+                DisableGoodText();
+            }
+            if (isExcellentTextActive)
+            {
+                DisableExcellentText();
+            }
+            
+        }
+    }
+
+    private void DisableGoodText()
+    {
+        goodText.SetActive(false);
+        isGoodTextActive = false;
+    }
+
+    public void EnableExcellentText()
+    {
+        excellentText.SetActive(true);
+        isExcellentTextActive = true;
+        StartCoroutine(UiTimer());
+    }
+
+    private void DisableExcellentText()
+    {
+        excellentText.SetActive(false);
+        isExcellentTextActive = false;
     }
 
     private void UpdateScore()
@@ -80,22 +140,27 @@ public class UiManager : MonoBehaviour
         {
             star1.color = initialColor;
         }
+
         if (score >= star2Value && score < star3Value)
         {
             star2.color = initialColor;
         }
+
         if (score >= star3Value)
         {
             star3.color = initialColor;
         }
+
         if (score < star1Value)
         {
             star1.color = lowAlphaColor;
         }
+
         if (score < star2Value)
         {
             star2.color = lowAlphaColor;
         }
+
         if (score < star3Value)
         {
             star3.color = lowAlphaColor;

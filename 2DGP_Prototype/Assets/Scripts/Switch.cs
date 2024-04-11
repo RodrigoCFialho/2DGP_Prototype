@@ -1,14 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Switch : MonoBehaviour, IInteractible
 {
     private GameManager gameManager = null;
 
+    [SerializeField]
+    private GameObject levelUI = null;
+
     private void Awake()
     {
         gameManager = FindObjectOfType<GameManager>();
+    }
+
+    private void Start()
+    {
+        levelUI.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -16,6 +25,8 @@ public class Switch : MonoBehaviour, IInteractible
         if (other.CompareTag("Player"))
         {
             other.GetComponent<InteractionSystem>().SetInteractible(this);
+
+            levelUI.SetActive(true);
         }
     }
 
@@ -24,6 +35,8 @@ public class Switch : MonoBehaviour, IInteractible
         if (other.CompareTag("Player"))
         {
             other.GetComponent<InteractionSystem>().SetInteractible(null);
+
+            levelUI.SetActive(false);
         }
     }
 
