@@ -11,15 +11,21 @@ public class UiManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI scoreText = null;
 
+    // UI note hit feedback
     [SerializeField]
     private GameObject goodText = null;
 
     private bool isGoodTextActive = true;
 
     [SerializeField]
-    private GameObject excellentText = null;
+    private GameObject perfectText = null;
 
-    private bool isExcellentTextActive = true;
+    private bool isPerfectTextActive = true;
+
+    [SerializeField]
+    private GameObject missText = null;
+
+    private bool isMissTextActive = true;
 
     [SerializeField]
     private float uiTime = 2f;
@@ -60,7 +66,8 @@ public class UiManager : MonoBehaviour
     private void Start()
     {
         DisableGoodText();
-        DisableExcellentText();
+        DisablePerfectText();
+        DisableMissText();
         // mudar o alpha (esparguete style)
         star1.color = lowAlphaColor;
         star2.color = lowAlphaColor;
@@ -71,26 +78,29 @@ public class UiManager : MonoBehaviour
 
     public void EnableGoodText()
     {
-        goodText.SetActive(true);
-        isGoodTextActive = true;
-        StartCoroutine(UiTimer());
+        if (!isGoodTextActive)
+        {
+            goodText.SetActive(true);
+            isGoodTextActive = true;
+            StartCoroutine(GoodUiTimer());
+        }
+        else
+        {
+            StopCoroutine(GoodUiTimer());
+            StartCoroutine(GoodUiTimer());
+        }
     }
 
-    private IEnumerator UiTimer()
+    private IEnumerator GoodUiTimer()
     {
         WaitForSeconds timetoWait = new WaitForSeconds(uiTime);
-        for (int i = 0; i >= 0; ++i)
+
+        while (true)
         {
             yield return timetoWait;
-            if (isGoodTextActive)
-            {
-                DisableGoodText();
-            }
-            if (isExcellentTextActive)
-            {
-                DisableExcellentText();
-            }
-            
+
+            DisableGoodText();
+            break;
         }
     }
 
@@ -100,17 +110,72 @@ public class UiManager : MonoBehaviour
         isGoodTextActive = false;
     }
 
-    public void EnableExcellentText()
+    public void EnablePerfectText()
     {
-        excellentText.SetActive(true);
-        isExcellentTextActive = true;
-        StartCoroutine(UiTimer());
+        if (!isPerfectTextActive)
+        {
+            perfectText.SetActive(true);
+            isPerfectTextActive = true;
+            StartCoroutine(PerfectUiTimer());
+        }
+        else
+        {
+            StopCoroutine(PerfectUiTimer());
+            StartCoroutine(PerfectUiTimer());
+        }
     }
 
-    private void DisableExcellentText()
+    private IEnumerator PerfectUiTimer()
     {
-        excellentText.SetActive(false);
-        isExcellentTextActive = false;
+        WaitForSeconds timetoWait = new WaitForSeconds(uiTime);
+
+        while (true)
+        {
+            yield return timetoWait;
+
+            DisablePerfectText();
+            break;
+        }
+    }
+
+    private void DisablePerfectText()
+    {
+        perfectText.SetActive(false);
+        isPerfectTextActive = false;
+    }
+
+    public void EnableMissText()
+    {
+        if (!isMissTextActive)
+        {
+            missText.SetActive(true);
+            isMissTextActive = true;
+            StartCoroutine(MissUiTimer());
+        }
+        else
+        {
+            StopCoroutine(MissUiTimer());
+            StartCoroutine(MissUiTimer());
+        }
+    }
+
+    private IEnumerator MissUiTimer()
+    {
+        WaitForSeconds timetoWait = new WaitForSeconds(uiTime);
+
+        while (true)
+        {
+            yield return timetoWait;
+
+            DisableMissText();
+            break;
+        }
+    }
+
+    private void DisableMissText()
+    {
+        missText.SetActive(false);
+        isMissTextActive = false;
     }
 
     private void UpdateScore()
@@ -122,6 +187,7 @@ public class UiManager : MonoBehaviour
 
     public void AddScore(float noteValue)
     {
+        // adding the score (can't go past 100)
         if (score >= -noteValue)
         {
             score = score + noteValue;
@@ -136,21 +202,21 @@ public class UiManager : MonoBehaviour
 
     private void UpdateScoreUi()
     {
+        // Activating the stars' initial colors
         if (star1Value <= score && score < star2Value)
         {
             star1.color = initialColor;
         }
-
-        if (score >= star2Value && score < star3Value)
+        else if (score < star3Value)
         {
             star2.color = initialColor;
         }
-
-        if (score >= star3Value)
+        else
         {
             star3.color = initialColor;
         }
 
+        // Deactivating the stars' initial colors to the low alpha variants
         if (score < star1Value)
         {
             star1.color = lowAlphaColor;

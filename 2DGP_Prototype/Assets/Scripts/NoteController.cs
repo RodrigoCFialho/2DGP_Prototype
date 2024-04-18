@@ -10,9 +10,9 @@ public class NoteController : MonoBehaviour
     private UiManager uiManager = null;
 
     [SerializeField]
-    private float noteValue = 5f;
+    public float noteValue = 5f;
 
-    private float noteValueExcellent = 10f;
+    private float noteValuePerfect = 10f;
 
     [SerializeField]
     private float speed = 2f;
@@ -44,27 +44,28 @@ public class NoteController : MonoBehaviour
     public void iWasHit()
     {
         wasHit = true;
-        Dismiss();
         uiManager.AddScore(noteValue);
         uiManager.EnableGoodText();
         print("Good");
+        Dismiss();
+
     }
 
     public void iWasNotHit()
     {
-        Dismiss();
         uiManager.AddScore(-noteValue);
+        uiManager.EnableMissText();
         print("Miss");
+        Dismiss();
     }
 
-    public void iWasHitExcellent()
+    public void iWasHitPerfect()
     {
         wasHit = true;
+        uiManager.AddScore(noteValuePerfect);
+        uiManager.EnablePerfectText();
+        print("Perfect");
         Dismiss();
-        uiManager.AddScore(noteValueExcellent);
-        uiManager.EnableExcellentText();
-        print("Excellent");
-
     }
 
     // Destroy the Note

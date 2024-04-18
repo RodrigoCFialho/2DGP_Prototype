@@ -62,7 +62,6 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Interfaces\IInteractible.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem.cs" />
-    <Compile Include="Assets\Scripts\InputSystem.cs" />
     <Compile Include="Assets\Scripts\ButtonController.cs" />
     <Compile Include="Assets\CustomInput.cs" />
     <Compile Include="Assets\Scripts\NoteController.cs" />
