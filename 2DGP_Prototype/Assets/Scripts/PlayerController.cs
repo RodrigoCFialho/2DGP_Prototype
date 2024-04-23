@@ -12,9 +12,6 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private float speed = 3f;
-    private Vector2 moveInput;
-
-    private CustomInput customInput;
 
     private void Awake()
     {
@@ -22,36 +19,14 @@ public class PlayerController : MonoBehaviour
         myAnimator = GetComponent<Animator>();
     }
 
-    private void Start()
-    {
-        customInput = CustomInputManager.Instance.GetCustomInput();
-        customInput.Player.Movement.Enable();
-
-        customInput.Player.Movement.performed += InputMovementPerformedHandler;
-        customInput.Player.Movement.canceled += InputMovementCancelledHandler;
-    }
-
-    private void OnDestroy()
-    {
-        customInput.Player.Movement.performed -= InputMovementPerformedHandler;
-        customInput.Player.Movement.canceled -= InputMovementCancelledHandler;
-    }
-
-    private void InputMovementCancelledHandler(InputAction.CallbackContext context)
-    {
-        moveInput = Vector2.zero;
-    }
-
-    private void InputMovementPerformedHandler(InputAction.CallbackContext context)
-    {
-        moveInput = context.ReadValue<Vector2>();
-    }
-   
-    private void FixedUpdate()
+    public void EnableMovementEvent(Vector2 moveInput)
     {
         // movement
         myRigidbody2D.velocity = moveInput * speed;
+    }
 
+    private void FixedUpdate()
+    {
         // animations
         myAnimator.SetFloat("VerticalSpeed", myRigidbody2D.velocity.y);
         myAnimator.SetFloat("HorizontalSpeed", myRigidbody2D.velocity.x);

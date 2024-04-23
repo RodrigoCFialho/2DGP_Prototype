@@ -12,56 +12,24 @@ public class ButtonController : MonoBehaviour
     [SerializeField]
     private float perfectHit = 0.10f;
 
-    private Vector2 upInput;
-
-    private CustomInput customInput;
-
     private void Awake()
     {
         boxCollider2D = GetComponent<BoxCollider2D>();
     }
 
-    private void Start()
+    public void HitEvent()
     {
-        customInput = CustomInputManager.Instance.GetCustomInput();
-        customInput.Player.UP.Enable();
-
-        customInput.Player.UP.performed += InputUpPerformedHandler;
-        customInput.Player.UP.canceled += InputUpCancelledHandler;
-    }
-
-    private void OnDestroy()
-    {
-        customInput.Player.UP.performed -= InputUpPerformedHandler;
-        customInput.Player.UP.canceled -= InputUpCancelledHandler;
-    }
-
-    private void InputUpCancelledHandler(InputAction.CallbackContext context)
-    {
-        upInput = Vector2.zero;
-    }
-
-    private void InputUpPerformedHandler(InputAction.CallbackContext context)
-    {
-        upInput = context.ReadValue<Vector2>();
-    }
-
-    private void Update()
-    {
-        // Press W or ^ to hit the note
-        float verticalInput = Input.GetAxisRaw("Vertical");
-
         if (noteController == null)
         {
             return;
         }
 
-        if (verticalInput > 0f && (Mathf.Abs(noteController.transform.position.x - this.transform.position.x) <= (boxCollider2D.size.x * perfectHit)))
+        if (Mathf.Abs(noteController.transform.position.x - this.transform.position.x) <= (boxCollider2D.size.x * perfectHit))
         {
             noteController.iWasHitPerfect();
             noteController = null;
         }
-        else if (verticalInput > 0f && (Mathf.Abs(noteController.transform.position.x - this.transform.position.x) <= boxCollider2D.size.x))
+        else if (Mathf.Abs(noteController.transform.position.x - this.transform.position.x) <= boxCollider2D.size.x)
         {
             noteController.iWasHit();
             noteController = null;
@@ -90,5 +58,4 @@ public class ButtonController : MonoBehaviour
         Gizmos.color = Color.cyan;
         Gizmos.DrawWireCube(transform.position, (boxCollider2D.size) * perfectHit);
     }
-
 }

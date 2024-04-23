@@ -485,6 +485,7 @@ GameObject:
   m_Component:
   - component: {fileID: 359693011}
   - component: {fileID: 359693012}
+  - component: {fileID: 359693013}
   m_Layer: 0
   m_Name: UI Manager
   m_TagString: Untagged
@@ -531,6 +532,63 @@ MonoBehaviour:
   star2Value: 75
   star3: {fileID: 2117005383}
   star3Value: 90
+--- !u!114 &359693013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359693010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18bcba8b97d12994b8a5bd75cf4984aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onEnableMovementEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 206015237}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: EnableMovementEvent
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onInteractEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 206015243}
+        m_TargetAssemblyTypeName: InteractionSystem, Assembly-CSharp
+        m_MethodName: InteractEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onHitEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2043517917}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: HitEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &378005932
 GameObject:
   m_ObjectHideFlags: 0
@@ -2349,6 +2407,17 @@ Transform:
   - {fileID: 1406861350}
   m_Father: {fileID: 1474064553}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2043517917 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8523361836161835251, guid: a8177f51df815934fa7d775aca5c570a, type: 3}
+  m_PrefabInstance: {fileID: 443413579983144663}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b958467decc363408801f0cef9ed8f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2099518580
 GameObject:
   m_ObjectHideFlags: 0

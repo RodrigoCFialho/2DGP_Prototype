@@ -2,24 +2,25 @@ using UnityEngine;
 
 public class CustomInputManager : MonoBehaviour
 {
-    public static CustomInputManager Instance { get; private set; } = null;
-    private CustomInput customInput;
+    public static CustomInputManager Instance { get; private set; }
+    public CustomInput customInputsBindings { get; private set; }
 
     private void Awake()
     {
-        if (Instance == null)
+        if (Instance != null)
         {
-            Instance = this;
-            customInput = new CustomInput();
+            Destroy(this);
         }
         else
         {
-            Destroy(gameObject);
+            Instance = this;
+            SetupSingleton();
         }
     }
 
-    public CustomInput GetCustomInput()
+    private void SetupSingleton()
     {
-        return customInput;
+        customInputsBindings = new CustomInput();
+        customInputsBindings.Enable();
     }
 }

@@ -24,7 +24,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "UP",
+                    "name": "Hit",
                     "type": "Button",
                     "id": "c87ab30a-a756-498b-a494-4fa9075f19ee",
                     "expectedControlType": "Button",
@@ -255,26 +255,15 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "up",
-                    "id": "c1133683-46dc-4e0b-9744-3cb3e0f00ae3",
-                    "path": "<Keyboard>/w",
+                    "name": "",
+                    "id": "0e924fba-4627-419f-a4c1-1a8e1c9c2e34",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "UP",
+                    "action": "Hit",
                     "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "up",
-                    "id": "82f16c60-237f-4d6a-b5b6-a5d978b4238e",
-                    "path": "<Gamepad>/dpad/up",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "UP",
-                    "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 }
             ]
         }
