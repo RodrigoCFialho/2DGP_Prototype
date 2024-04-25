@@ -187,11 +187,12 @@ public class UiManager : MonoBehaviour
 
     public void AddScore(float noteValue)
     {
-        // adding the score (can't go past 100)
+        // adding the score and making sure it can´t be lower than 0
         if (score >= -noteValue)
         {
             score = score + noteValue;
         }
+        // can't go past 100
         if (score > 100f)
         {
             score = 100f;
