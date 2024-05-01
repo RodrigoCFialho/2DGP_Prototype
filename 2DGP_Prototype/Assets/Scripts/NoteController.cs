@@ -7,8 +7,6 @@ public class NoteController : MonoBehaviour
 {
     private Rigidbody2D myRigidbody2D = null;
 
-    private UiManager uiManager = null;
-
     [SerializeField]
     public float noteValue = 5f;
 
@@ -23,8 +21,7 @@ public class NoteController : MonoBehaviour
 
     private void Awake()
     {
-        myRigidbody2D = GetComponent<Rigidbody2D>();
-        uiManager = FindObjectOfType<UiManager>();
+        myRigidbody2D = GetComponent<Rigidbody2D>();;
     }
 
     private void Start()
@@ -44,8 +41,8 @@ public class NoteController : MonoBehaviour
     public void iWasHit()
     {
         wasHit = true;
-        uiManager.AddScore(noteValue);
-        uiManager.EnableGoodText();
+        UiManager.Instance.AddScore(noteValue);
+        UiManager.Instance.EnableGoodText();
         print("Good");
         Dismiss();
 
@@ -53,8 +50,8 @@ public class NoteController : MonoBehaviour
 
     public void iWasNotHit()
     {
-        uiManager.AddScore(-noteValue);
-        uiManager.EnableMissText();
+        UiManager.Instance.AddScore(-noteValue);
+        UiManager.Instance.EnableMissText();
         print("Miss");
         Dismiss();
     }
@@ -62,8 +59,8 @@ public class NoteController : MonoBehaviour
     public void iWasHitPerfect()
     {
         wasHit = true;
-        uiManager.AddScore(noteValuePerfect);
-        uiManager.EnablePerfectText();
+        UiManager.Instance.AddScore(noteValuePerfect);
+        UiManager.Instance.EnablePerfectText();
         print("Perfect");
         Dismiss();
     }

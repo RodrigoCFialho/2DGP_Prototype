@@ -46,9 +46,18 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Hit"",
+                    ""name"": ""UpHit"",
                     ""type"": ""Button"",
                     ""id"": ""c87ab30a-a756-498b-a494-4fa9075f19ee"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""DownHit"",
+                    ""type"": ""Button"",
+                    ""id"": ""64cc6980-60c9-4856-98b1-fd337b48dd84"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -278,12 +287,23 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""0e924fba-4627-419f-a4c1-1a8e1c9c2e34"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""id"": ""5c0a10b5-176a-4d91-8fa1-d89a08783b8d"",
+                    ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Hit"",
+                    ""action"": ""UpHit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d414c387-7c3e-4f1a-8cce-85b2d21ab199"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DownHit"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -296,7 +316,8 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
-        m_Player_Hit = m_Player.FindAction("Hit", throwIfNotFound: true);
+        m_Player_UpHit = m_Player.FindAction("UpHit", throwIfNotFound: true);
+        m_Player_DownHit = m_Player.FindAction("DownHit", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -360,14 +381,16 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_Movement;
     private readonly InputAction m_Player_Interact;
-    private readonly InputAction m_Player_Hit;
+    private readonly InputAction m_Player_UpHit;
+    private readonly InputAction m_Player_DownHit;
     public struct PlayerActions
     {
         private @CustomInput m_Wrapper;
         public PlayerActions(@CustomInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
-        public InputAction @Hit => m_Wrapper.m_Player_Hit;
+        public InputAction @UpHit => m_Wrapper.m_Player_UpHit;
+        public InputAction @DownHit => m_Wrapper.m_Player_DownHit;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -383,9 +406,12 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
-            @Hit.started += instance.OnHit;
-            @Hit.performed += instance.OnHit;
-            @Hit.canceled += instance.OnHit;
+            @UpHit.started += instance.OnUpHit;
+            @UpHit.performed += instance.OnUpHit;
+            @UpHit.canceled += instance.OnUpHit;
+            @DownHit.started += instance.OnDownHit;
+            @DownHit.performed += instance.OnDownHit;
+            @DownHit.canceled += instance.OnDownHit;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -396,9 +422,12 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
-            @Hit.started -= instance.OnHit;
-            @Hit.performed -= instance.OnHit;
-            @Hit.canceled -= instance.OnHit;
+            @UpHit.started -= instance.OnUpHit;
+            @UpHit.performed -= instance.OnUpHit;
+            @UpHit.canceled -= instance.OnUpHit;
+            @DownHit.started -= instance.OnDownHit;
+            @DownHit.performed -= instance.OnDownHit;
+            @DownHit.canceled -= instance.OnDownHit;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -420,6 +449,7 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
-        void OnHit(InputAction.CallbackContext context);
+        void OnUpHit(InputAction.CallbackContext context);
+        void OnDownHit(InputAction.CallbackContext context);
     }
 }

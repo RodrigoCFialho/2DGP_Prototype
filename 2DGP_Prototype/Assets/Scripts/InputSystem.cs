@@ -17,7 +17,10 @@ public class InputSystem : MonoBehaviour
     private UnityEvent onInteractEvent;
 
     [SerializeField]
-    private UnityEvent onHitEvent;
+    private UnityEvent onUpHitEvent;
+
+    [SerializeField]
+    private UnityEvent onDownHitEvent;
 
     private void Start()
     {
@@ -28,12 +31,9 @@ public class InputSystem : MonoBehaviour
 
         customInput.Player.Interact.performed += InputInteractPerformed;
 
-        customInput.Player.Hit.performed += InputHitPerformedHandler;
-    }
+        customInput.Player.UpHit.performed += InputUpHitPerformedHandler;
 
-    private void InputInteractPerformed(InputAction.CallbackContext context)
-    {
-        onInteractEvent.Invoke();
+        customInput.Player.DownHit.performed += InputDownHitPerformedHandler;
     }
 
     private void OnDisable()
@@ -43,12 +43,24 @@ public class InputSystem : MonoBehaviour
 
         customInput.Player.Interact.performed -= InputInteractPerformed;
 
-        customInput.Player.Hit.performed -= InputHitPerformedHandler;
+        customInput.Player.UpHit.performed -= InputUpHitPerformedHandler;
+
+        customInput.Player.DownHit.performed -= InputDownHitPerformedHandler;
     }
 
-    private void InputHitPerformedHandler(InputAction.CallbackContext context)
+    private void InputDownHitPerformedHandler(InputAction.CallbackContext context)
     {
-        onHitEvent.Invoke();
+        onDownHitEvent.Invoke();
+    }
+
+    private void InputInteractPerformed(InputAction.CallbackContext context)
+    {
+        onInteractEvent.Invoke();
+    }
+
+    private void InputUpHitPerformedHandler(InputAction.CallbackContext context)
+    {
+        onUpHitEvent.Invoke();
     }
 
     private void InputMovementPerformed(InputAction.CallbackContext context)

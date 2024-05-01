@@ -8,10 +8,15 @@ public class NoteSpawner : MonoBehaviour
     private NoteController notePrefab = null;
 
     [SerializeField]
-    private Transform SpawnPoint = null;
+    private Transform spawnPoint = null;
 
     [SerializeField]
     private float timeBetweenSpawns = 2f;
+
+    private void Start()
+    {
+        StartCoroutine(SpawnNotes());
+    }
 
     private IEnumerator SpawnNotes()
     {
@@ -23,13 +28,8 @@ public class NoteSpawner : MonoBehaviour
         }
     }
 
-    public void StartSpawner()
-    {
-        StartCoroutine(SpawnNotes());
-    }
-
     private void SpawnNote()
     {
-        NoteController noteController = Instantiate(notePrefab, SpawnPoint.position, SpawnPoint.rotation);
+        NoteController noteController = Instantiate(notePrefab, spawnPoint.position, spawnPoint.rotation);
     }
 }

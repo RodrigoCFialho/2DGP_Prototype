@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class UiManager : MonoBehaviour
 {
+    public static UiManager Instance {  get; private set; }
+
     // UI com percentagem de notas acertadas
     [SerializeField]
     private TextMeshProUGUI scoreText = null;
@@ -34,21 +36,15 @@ public class UiManager : MonoBehaviour
     private float score = 0f;
 
 
-    // estrelas adquiridas (era para fazer em array mas isto não tava a dar ns pq)
+    // estrelas adquiridas
     [SerializeField]
-    private Image star1 = null;
+    private Image[] star;
 
     [SerializeField]
     private float star1Value = 60f;
 
     [SerializeField]
-    private Image star2 = null;
-
-    [SerializeField]
     private float star2Value = 75f;
-
-    [SerializeField]
-    private Image star3 = null;
 
     [SerializeField]
     private float star3Value = 90f;
@@ -57,9 +53,19 @@ public class UiManager : MonoBehaviour
 
     private Color initialColor;
 
+
     private void Awake()
     {
-        initialColor = star1.color;
+        if (Instance != null)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+
+        initialColor = star[0].color;
     }
 
 
@@ -68,12 +74,41 @@ public class UiManager : MonoBehaviour
         DisableGoodText();
         DisablePerfectText();
         DisableMissText();
-        // mudar o alpha (esparguete style)
-        star1.color = lowAlphaColor;
-        star2.color = lowAlphaColor;
-        star3.color = lowAlphaColor;
+
+        // mudar o alpha
+        for (int i = 0; i < star.Length; ++i)
+        {
+            star[i].color = lowAlphaColor;
+        }
 
         UpdateScore();
+    }
+
+    private IEnumerator UiTimer()
+    {
+        WaitForSeconds timetoWait = new WaitForSeconds(uiTime);
+
+        while (true)
+        {
+            yield return timetoWait;
+
+            if (isGoodTextActive)
+            {
+                DisableGoodText();
+            }
+
+            if (isPerfectTextActive)
+            {
+                DisablePerfectText() ;
+            }
+
+            if (isMissTextActive)
+            {
+                DisableMissText();
+            }
+            
+            break;
+        }
     }
 
     public void EnableGoodText()
@@ -82,25 +117,12 @@ public class UiManager : MonoBehaviour
         {
             goodText.SetActive(true);
             isGoodTextActive = true;
-            StartCoroutine(GoodUiTimer());
+            StartCoroutine(UiTimer());
         }
         else
         {
-            StopCoroutine(GoodUiTimer());
-            StartCoroutine(GoodUiTimer());
-        }
-    }
-
-    private IEnumerator GoodUiTimer()
-    {
-        WaitForSeconds timetoWait = new WaitForSeconds(uiTime);
-
-        while (true)
-        {
-            yield return timetoWait;
-
-            DisableGoodText();
-            break;
+            StopCoroutine(UiTimer());
+            StartCoroutine(UiTimer());
         }
     }
 
@@ -116,25 +138,12 @@ public class UiManager : MonoBehaviour
         {
             perfectText.SetActive(true);
             isPerfectTextActive = true;
-            StartCoroutine(PerfectUiTimer());
+            StartCoroutine(UiTimer());
         }
         else
         {
-            StopCoroutine(PerfectUiTimer());
-            StartCoroutine(PerfectUiTimer());
-        }
-    }
-
-    private IEnumerator PerfectUiTimer()
-    {
-        WaitForSeconds timetoWait = new WaitForSeconds(uiTime);
-
-        while (true)
-        {
-            yield return timetoWait;
-
-            DisablePerfectText();
-            break;
+            StopCoroutine(UiTimer());
+            StartCoroutine(UiTimer());
         }
     }
 
@@ -150,25 +159,12 @@ public class UiManager : MonoBehaviour
         {
             missText.SetActive(true);
             isMissTextActive = true;
-            StartCoroutine(MissUiTimer());
+            StartCoroutine(UiTimer());
         }
         else
         {
-            StopCoroutine(MissUiTimer());
-            StartCoroutine(MissUiTimer());
-        }
-    }
-
-    private IEnumerator MissUiTimer()
-    {
-        WaitForSeconds timetoWait = new WaitForSeconds(uiTime);
-
-        while (true)
-        {
-            yield return timetoWait;
-
-            DisableMissText();
-            break;
+            StopCoroutine(UiTimer());
+            StartCoroutine(UiTimer());
         }
     }
 
@@ -192,6 +188,7 @@ public class UiManager : MonoBehaviour
         {
             score = score + noteValue;
         }
+
         // can't go past 100
         if (score > 100f)
         {
@@ -204,33 +201,33 @@ public class UiManager : MonoBehaviour
     private void UpdateScoreUi()
     {
         // Activating the stars' initial colors
-        if (star1Value <= score && score < star2Value)
+        if (star1Value <= score && score < star2Value && star[0].color == lowAlphaColor)
         {
-            star1.color = initialColor;
+            star[0].color = initialColor;
         }
-        else if (score < star3Value)
+        else if (score < star3Value && star[1].color == lowAlphaColor)
         {
-            star2.color = initialColor;
+            star[1].color = initialColor;
         }
-        else
+        else if (star[2].color == lowAlphaColor)
         {
-            star3.color = initialColor;
+            star[2].color = initialColor;
         }
 
         // Deactivating the stars' initial colors to the low alpha variants
-        if (score < star1Value)
+        if (score < star1Value && star[0].color == initialColor)
         {
-            star1.color = lowAlphaColor;
+            star[0].color = lowAlphaColor;
         }
 
-        if (score < star2Value)
+        if (score < star2Value && star[1].color == initialColor)
         {
-            star2.color = lowAlphaColor;
+            star[1].color = lowAlphaColor;
         }
 
-        if (score < star3Value)
+        if (score < star3Value && star[2].color == initialColor)
         {
-            star3.color = lowAlphaColor;
+            star[2].color = lowAlphaColor;
         }
     }
 

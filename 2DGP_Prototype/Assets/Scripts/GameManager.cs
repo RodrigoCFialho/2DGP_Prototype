@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance { get; private set; }
+
     // Enablers para ligar e desligar o UI e os objetos do jogo de ritmo
     [SerializeField]
     private GameObject RhythmGameEnabler = null;
@@ -18,11 +20,19 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject Player = null;
 
-    [SerializeField]
-    private NoteSpawner NoteSpawner = null;
-
     private bool startGame = false;
 
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
 
     private void Start()
     {
@@ -47,7 +57,6 @@ public class GameManager : MonoBehaviour
         RhythmGameUiEnabler.SetActive(true);
         Player.SetActive(false);
         CogwheelUi.SetActive(false);
-        NoteSpawner.StartSpawner();
     }
     
     private void TurnOffLevel()

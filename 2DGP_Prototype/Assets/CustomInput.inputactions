@@ -24,9 +24,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Hit",
+                    "name": "UpHit",
                     "type": "Button",
                     "id": "c87ab30a-a756-498b-a494-4fa9075f19ee",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DownHit",
+                    "type": "Button",
+                    "id": "64cc6980-60c9-4856-98b1-fd337b48dd84",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -256,12 +265,23 @@
                 },
                 {
                     "name": "",
-                    "id": "0e924fba-4627-419f-a4c1-1a8e1c9c2e34",
-                    "path": "<Keyboard>/space",
+                    "id": "5c0a10b5-176a-4d91-8fa1-d89a08783b8d",
+                    "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Hit",
+                    "action": "UpHit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d414c387-7c3e-4f1a-8cce-85b2d21ab199",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DownHit",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

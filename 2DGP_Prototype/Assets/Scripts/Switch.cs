@@ -5,15 +5,8 @@ using UnityEngine;
 
 public class Switch : MonoBehaviour, IInteractible
 {
-    private GameManager gameManager = null;
-
     [SerializeField]
     private GameObject levelUI = null;
-
-    private void Awake()
-    {
-        gameManager = FindObjectOfType<GameManager>();
-    }
 
     private void Start()
     {
@@ -42,6 +35,6 @@ public class Switch : MonoBehaviour, IInteractible
 
     public void Interact()
     {
-        gameManager.TurnOnLevel();
+        GameManager.Instance.TurnOnLevel();
     }
 }
