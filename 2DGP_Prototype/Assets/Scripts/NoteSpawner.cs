@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class NoteSpawner : MonoBehaviour
@@ -11,7 +12,7 @@ public class NoteSpawner : MonoBehaviour
     private Transform spawnPoint = null;
 
     [SerializeField]
-    private float timeBetweenSpawns = 2f;
+    private float[] timeBetweenSpawns = null;
 
     private void Start()
     {
@@ -20,11 +21,12 @@ public class NoteSpawner : MonoBehaviour
 
     private IEnumerator SpawnNotes()
     {
-        WaitForSeconds timetoWait = new WaitForSeconds(timeBetweenSpawns);
+        WaitForSeconds timetoWait = new WaitForSeconds(Random.Range(timeBetweenSpawns[0], timeBetweenSpawns[1]));
         for (int i = 0; i >= 0; ++i)
         {
             yield return timetoWait;
             SpawnNote();
+            timetoWait = new WaitForSeconds(Random.Range(timeBetweenSpawns[0], timeBetweenSpawns[1]));
         }
     }
 

@@ -39,9 +39,9 @@ public class GameManager : MonoBehaviour
         TurnOffLevel();
     }
 
+    // isto é para apagar, pq é suposto sair do nível pelo pause menu
     private void Update()
     {
-        // Desligar o jogo de ritmo e voltar para o level map
         if (startGame && Input.GetKeyDown(KeyCode.R))
         {
             TurnOffLevel();
@@ -59,6 +59,7 @@ public class GameManager : MonoBehaviour
         CogwheelUi.SetActive(false);
     }
     
+    // Desligar o jogo de ritmo e voltar para o level map
     private void TurnOffLevel()
     {
         startGame = false;
@@ -67,5 +68,10 @@ public class GameManager : MonoBehaviour
         RhythmGameUiEnabler.SetActive(false);
         Player.SetActive(true);
         CogwheelUi.SetActive(true);
+    }
+
+    public void Pause()
+    {
+
     }
 }

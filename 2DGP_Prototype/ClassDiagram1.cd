@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="@CustomInput" BaseTypeListCollapsed="true">
+    <Position X="3" Y="3.25" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="@CustomInput.PlayerActions" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\CustomInput.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+      <Interface Name="@CustomInput.IPlayerActions" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\CustomInput.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Interface>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAIBAgAAAECBABAAAAAGBEAEAgQEBQAAg=</HashCode>
+      <FileName>Assets\CustomInput.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ButtonController">
+    <Position X="7" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAIAEAAAAAAAAAAAAMAAAAAAAAAQAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\ButtonController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CustomInputManager">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAQAQAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\CustomInputManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameManager">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAAAAACAAAAAAECAAAAAAAAAAAAAAQAAAAQAgAEA=</HashCode>
+      <FileName>Assets\Scripts\GameManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InputSystem">
+    <Position X="5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQCAEJAQAAAAAAgAAAAAACAAIgAAAAAAQgSA=</HashCode>
+      <FileName>Assets\Scripts\InputSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InteractionSystem">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\InteractionSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainMenu">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\MainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NoteController">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACEAAAAAAAAAAACgCAAAQQAAAAAAACAAAkA=</HashCode>
+      <FileName>Assets\Scripts\NoteController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NoteSpawner">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAACAAAAAAAAAAAgAQAAAAAAAAAAAQAQAAAAA=</HashCode>
+      <FileName>Assets\Scripts\NoteSpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerController">
+    <Position X="7" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAgAAAAAAAAQAAAAAAAAAAQAAAAAAACAAAEA=</HashCode>
+      <FileName>Assets\Scripts\PlayerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Switch" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAACAAAAAAAAAAAAAAIEAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Switch.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="UiManager">
+    <Position X="13.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABACEAAASAEAQCREBgICACgABCAAAABQARAAAAIAEA=</HashCode>
+      <FileName>Assets\Scripts\UiManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="IInteractible">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Interfaces\IInteractible.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

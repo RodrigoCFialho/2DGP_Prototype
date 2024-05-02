@@ -62,6 +62,15 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""17f54be1-d304-47ed-ae7f-13036c3c90e6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -306,6 +315,17 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
                     ""action"": ""DownHit"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3abb431a-44ca-4b39-aebd-2b853518dca0"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -318,6 +338,7 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_UpHit = m_Player.FindAction("UpHit", throwIfNotFound: true);
         m_Player_DownHit = m_Player.FindAction("DownHit", throwIfNotFound: true);
+        m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -383,6 +404,7 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_UpHit;
     private readonly InputAction m_Player_DownHit;
+    private readonly InputAction m_Player_Pause;
     public struct PlayerActions
     {
         private @CustomInput m_Wrapper;
@@ -391,6 +413,7 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputAction @UpHit => m_Wrapper.m_Player_UpHit;
         public InputAction @DownHit => m_Wrapper.m_Player_DownHit;
+        public InputAction @Pause => m_Wrapper.m_Player_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -412,6 +435,9 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
             @DownHit.started += instance.OnDownHit;
             @DownHit.performed += instance.OnDownHit;
             @DownHit.canceled += instance.OnDownHit;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -428,6 +454,9 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
             @DownHit.started -= instance.OnDownHit;
             @DownHit.performed -= instance.OnDownHit;
             @DownHit.canceled -= instance.OnDownHit;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -451,5 +480,6 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnUpHit(InputAction.CallbackContext context);
         void OnDownHit(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }

@@ -21,10 +21,11 @@ public class ButtonController : MonoBehaviour
     {
         if (noteController == null)
         {
-            return;
+            UiManager.Instance.AddScore(-10f);
+            UiManager.Instance.EnableMissText();
+            print("Miss");
         }
-
-        if (Mathf.Abs(noteController.transform.position.x - this.transform.position.x) <= (boxCollider2D.size.x * perfectHit))
+        else if (Mathf.Abs(noteController.transform.position.x - this.transform.position.x) <= (boxCollider2D.size.x * perfectHit))
         {
             noteController.iWasHitPerfect();
             noteController = null;

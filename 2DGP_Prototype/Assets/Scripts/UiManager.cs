@@ -15,17 +15,11 @@ public class UiManager : MonoBehaviour
 
     // UI note hit feedback
     [SerializeField]
-    private GameObject goodText = null;
+    private TextMeshProUGUI feedbackText = null;
 
     private bool isGoodTextActive = true;
 
-    [SerializeField]
-    private GameObject perfectText = null;
-
     private bool isPerfectTextActive = true;
-
-    [SerializeField]
-    private GameObject missText = null;
 
     private bool isMissTextActive = true;
 
@@ -34,7 +28,6 @@ public class UiManager : MonoBehaviour
 
     [SerializeField]
     private float score = 0f;
-
 
     // estrelas adquiridas
     [SerializeField]
@@ -115,8 +108,9 @@ public class UiManager : MonoBehaviour
     {
         if (!isGoodTextActive)
         {
-            goodText.SetActive(true);
+            feedbackText.gameObject.SetActive(true);
             isGoodTextActive = true;
+            feedbackText.text = "GOOD";
             StartCoroutine(UiTimer());
         }
         else
@@ -128,7 +122,7 @@ public class UiManager : MonoBehaviour
 
     private void DisableGoodText()
     {
-        goodText.SetActive(false);
+        feedbackText.gameObject.SetActive(false);
         isGoodTextActive = false;
     }
 
@@ -136,8 +130,9 @@ public class UiManager : MonoBehaviour
     {
         if (!isPerfectTextActive)
         {
-            perfectText.SetActive(true);
+            feedbackText.gameObject.SetActive(true);
             isPerfectTextActive = true;
+            feedbackText.text = "PERFECT";
             StartCoroutine(UiTimer());
         }
         else
@@ -149,7 +144,7 @@ public class UiManager : MonoBehaviour
 
     private void DisablePerfectText()
     {
-        perfectText.SetActive(false);
+        feedbackText.gameObject.SetActive(false);
         isPerfectTextActive = false;
     }
 
@@ -157,8 +152,9 @@ public class UiManager : MonoBehaviour
     {
         if (!isMissTextActive)
         {
-            missText.SetActive(true);
+            feedbackText.gameObject.SetActive(true);
             isMissTextActive = true;
+            feedbackText.text = "MISS";
             StartCoroutine(UiTimer());
         }
         else
@@ -170,7 +166,7 @@ public class UiManager : MonoBehaviour
 
     private void DisableMissText()
     {
-        missText.SetActive(false);
+        feedbackText.gameObject.SetActive(false);
         isMissTextActive = false;
     }
 

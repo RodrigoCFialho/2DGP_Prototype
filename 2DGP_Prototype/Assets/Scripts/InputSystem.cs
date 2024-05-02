@@ -22,6 +22,9 @@ public class InputSystem : MonoBehaviour
     [SerializeField]
     private UnityEvent onDownHitEvent;
 
+    [SerializeField]
+    private UnityEvent onPauseEvent;
+
     private void Start()
     {
         customInput = CustomInputManager.Instance.customInputsBindings;
@@ -34,6 +37,8 @@ public class InputSystem : MonoBehaviour
         customInput.Player.UpHit.performed += InputUpHitPerformedHandler;
 
         customInput.Player.DownHit.performed += InputDownHitPerformedHandler;
+
+        customInput.Player.Pause.performed += InputPausePerformedHandler;
     }
 
     private void OnDisable()
@@ -46,11 +51,14 @@ public class InputSystem : MonoBehaviour
         customInput.Player.UpHit.performed -= InputUpHitPerformedHandler;
 
         customInput.Player.DownHit.performed -= InputDownHitPerformedHandler;
+
+        customInput.Player.Pause.performed -= InputPausePerformedHandler;
     }
 
-    private void InputDownHitPerformedHandler(InputAction.CallbackContext context)
+    private void InputMovementPerformed(InputAction.CallbackContext context)
     {
-        onDownHitEvent.Invoke();
+        moveInput = context.ReadValue<Vector2>();
+        onEnableMovementEvent.Invoke(moveInput);
     }
 
     private void InputInteractPerformed(InputAction.CallbackContext context)
@@ -63,10 +71,14 @@ public class InputSystem : MonoBehaviour
         onUpHitEvent.Invoke();
     }
 
-    private void InputMovementPerformed(InputAction.CallbackContext context)
+    private void InputDownHitPerformedHandler(InputAction.CallbackContext context)
     {
-        moveInput = context.ReadValue<Vector2>();
-        onEnableMovementEvent.Invoke(moveInput);
+        onDownHitEvent.Invoke();
+    }
+
+    private void InputPausePerformedHandler(InputAction.CallbackContext context)
+    {
+        onPauseEvent.Invoke();
     }
 
     private void InputMovementCancelled(InputAction.CallbackContext context)
