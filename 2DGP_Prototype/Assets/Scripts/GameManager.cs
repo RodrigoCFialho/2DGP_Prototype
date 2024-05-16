@@ -1,26 +1,13 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    // Enablers para ligar e desligar o UI e os objetos do jogo de ritmo
     [SerializeField]
-    private GameObject RhythmGameEnabler = null;
-
-    [SerializeField]
-    private GameObject RhythmGameUiEnabler = null;
-
-
-    // UI do level map
-    [SerializeField]
-    private GameObject CogwheelUi = null;
-
-
-    [SerializeField]
-    private GameObject Player = null;
-
-    private bool startGame = false;
+    private float score = 0f;
 
     private void Awake()
     {
@@ -34,44 +21,30 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        TurnOffLevel();
-    }
-
-    // isto é para apagar, pq é suposto sair do nível pelo pause menu
-    private void Update()
-    {
-        if (startGame && Input.GetKeyDown(KeyCode.R))
-        {
-            TurnOffLevel();
-        }
-    }
-
-    // Iniciar o jogo de ritmo
-    public void TurnOnLevel()
-    {
-        startGame = true;
-
-        RhythmGameEnabler.SetActive(true);
-        RhythmGameUiEnabler.SetActive(true);
-        Player.SetActive(false);
-        CogwheelUi.SetActive(false);
-    }
-    
-    // Desligar o jogo de ritmo e voltar para o level map
-    private void TurnOffLevel()
-    {
-        startGame = false;
-
-        RhythmGameEnabler.SetActive(false);
-        RhythmGameUiEnabler.SetActive(false);
-        Player.SetActive(true);
-        CogwheelUi.SetActive(true);
-    }
-
     public void Pause()
     {
+        Time.timeScale = 0f;
+    }
 
+    public void Unpause()
+    {
+        Time.timeScale = 1f;
+    }
+
+    public void AddScore(float noteValue)
+    {
+        // adding the score and making sure it can´t be lower than 0
+        if (score >= -noteValue)
+        {
+            score = score + noteValue;
+        }
+
+        // can't go past 100
+        if (score > 100f)
+        {
+            score = 100f;
+        }
+
+        UiManager.Instance.UpdateScoreUi(score);
     }
 }

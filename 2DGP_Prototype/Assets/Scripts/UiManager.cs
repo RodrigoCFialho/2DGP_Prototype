@@ -1,7 +1,6 @@
 using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
-using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -26,9 +25,6 @@ public class UiManager : MonoBehaviour
     [SerializeField]
     private float uiTime = 2f;
 
-    [SerializeField]
-    private float score = 0f;
-
     // estrelas adquiridas
     [SerializeField]
     private Image[] star;
@@ -42,10 +38,11 @@ public class UiManager : MonoBehaviour
     [SerializeField]
     private float star3Value = 90f;
 
-    private Color lowAlphaColor = new Color(255f, 255f, 255f, 0.5f);
+    [SerializeField]
+    private Sprite starDeactivated;
 
-    private Color initialColor;
-
+    [SerializeField]
+    private Sprite starActivated;
 
     private void Awake()
     {
@@ -57,10 +54,7 @@ public class UiManager : MonoBehaviour
         {
             Instance = this;
         }
-
-        initialColor = star[0].color;
     }
-
 
     private void Start()
     {
@@ -69,12 +63,12 @@ public class UiManager : MonoBehaviour
         DisableMissText();
 
         // mudar o alpha
-        for (int i = 0; i < star.Length; ++i)
+        for (int i = 0; i < star.Length; ++i)   
         {
-            star[i].color = lowAlphaColor;
+            star[i].sprite = starDeactivated;
         }
 
-        UpdateScore();
+        UpdateScoreUi(0f);
     }
 
     private IEnumerator UiTimer()
@@ -170,60 +164,39 @@ public class UiManager : MonoBehaviour
         isMissTextActive = false;
     }
 
-    private void UpdateScore()
+    public void UpdateScoreUi(float score)
     {
+        //Updating score text
         scoreText.text = score + "%";
 
-        UpdateScoreUi();
-    }
-
-    public void AddScore(float noteValue)
-    {
-        // adding the score and making sure it can´t be lower than 0
-        if (score >= -noteValue)
-        {
-            score = score + noteValue;
-        }
-
-        // can't go past 100
-        if (score > 100f)
-        {
-            score = 100f;
-        }
-
-        UpdateScore();
-    }
-
-    private void UpdateScoreUi()
-    {
         // Activating the stars' initial colors
-        if (star1Value <= score && score < star2Value && star[0].color == lowAlphaColor)
+        if (star1Value <= score && score < star2Value && star[0].sprite == starDeactivated)
         {
-            star[0].color = initialColor;
+            star[0].sprite = starActivated;
         }
-        else if (score < star3Value && star[1].color == lowAlphaColor)
+        else if (score < star3Value && star[1].sprite == starDeactivated)
         {
-            star[1].color = initialColor;
+            star[1].sprite = starActivated;
         }
-        else if (star[2].color == lowAlphaColor)
+        else if (star[2].sprite == starDeactivated)
         {
-            star[2].color = initialColor;
+            star[2].sprite = starActivated;
         }
 
         // Deactivating the stars' initial colors to the low alpha variants
-        if (score < star1Value && star[0].color == initialColor)
+        if (score < star1Value && star[0].sprite == starActivated)
         {
-            star[0].color = lowAlphaColor;
+            star[0].sprite = starDeactivated;
         }
 
-        if (score < star2Value && star[1].color == initialColor)
+        if (score < star2Value && star[1].sprite == starActivated)
         {
-            star[1].color = lowAlphaColor;
+            star[1].sprite = starDeactivated;
         }
 
-        if (score < star3Value && star[2].color == initialColor)
+        if (score < star3Value && star[2].sprite == starActivated)
         {
-            star[2].color = lowAlphaColor;
+            star[2].sprite = starDeactivated;
         }
     }
 

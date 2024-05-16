@@ -21,9 +21,8 @@ public class ButtonController : MonoBehaviour
     {
         if (noteController == null)
         {
-            UiManager.Instance.AddScore(-10f);
+            GameManager.Instance.AddScore(-10f);
             UiManager.Instance.EnableMissText();
-            print("Miss");
         }
         else if (Mathf.Abs(noteController.transform.position.x - this.transform.position.x) <= (boxCollider2D.size.x * perfectHit))
         {

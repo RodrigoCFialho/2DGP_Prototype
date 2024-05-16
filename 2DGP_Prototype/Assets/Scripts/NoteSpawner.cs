@@ -12,22 +12,43 @@ public class NoteSpawner : MonoBehaviour
     private Transform spawnPoint = null;
 
     [SerializeField]
-    private float[] timeBetweenSpawns = null;
+    private int maxNotesSpawned = 2;
+
+    [SerializeField]
+    private float timeBetweenSpawns = 1f;
+
+    [SerializeField]
+    private float spawnWaitTime = 3f;
 
     private void Start()
     {
-        StartCoroutine(SpawnNotes());
+        StartCoroutine(SpawnTimer());
+    }
+
+    private IEnumerator SpawnTimer()
+    {
+        WaitForSeconds timetoWait = new WaitForSeconds(spawnWaitTime);
+        for (int i = 0; i >= 0; ++i)
+        {
+            yield return timetoWait;
+            StartCoroutine(SpawnNotes());
+        }
     }
 
     private IEnumerator SpawnNotes()
     {
-        WaitForSeconds timetoWait = new WaitForSeconds(Random.Range(timeBetweenSpawns[0], timeBetweenSpawns[1]));
-        for (int i = 0; i >= 0; ++i)
+        WaitForSeconds timetoWait = new WaitForSeconds(timeBetweenSpawns);
+        NotesSpawned();
+        for (int i = 0; i < NotesSpawned(); ++i)
         {
             yield return timetoWait;
             SpawnNote();
-            timetoWait = new WaitForSeconds(Random.Range(timeBetweenSpawns[0], timeBetweenSpawns[1]));
         }
+    }
+
+    private int NotesSpawned()
+    {
+        return Random.Range(1, maxNotesSpawned+1);
     }
 
     private void SpawnNote()

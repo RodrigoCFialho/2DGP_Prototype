@@ -42,27 +42,24 @@ public class NoteController : MonoBehaviour
     public void iWasHit()
     {
         wasHit = true;
-        UiManager.Instance.AddScore(noteValue);
+        GameManager.Instance.AddScore(noteValue);
         UiManager.Instance.EnableGoodText();
-        print("Good");
         Dismiss();
 
     }
 
     public void iWasNotHit()
     {
-        UiManager.Instance.AddScore(-noteValue);
+        GameManager.Instance.AddScore(-noteValue);
         UiManager.Instance.EnableMissText();
-        print("Miss");
         Dismiss();
     }
 
     public void iWasHitPerfect()
     {
         wasHit = true;
-        UiManager.Instance.AddScore(noteValuePerfect);
+        GameManager.Instance.AddScore(noteValuePerfect);
         UiManager.Instance.EnablePerfectText();
-        print("Perfect");
         Dismiss();
     }
 

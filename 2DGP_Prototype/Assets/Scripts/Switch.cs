@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Switch : MonoBehaviour, IInteractible
 {
     [SerializeField]
-    private GameObject levelUI = null;
+    private GameObject levelUI;
+
+    [SerializeField]
+    private string levelName;
 
     private void Start()
     {
@@ -35,6 +39,6 @@ public class Switch : MonoBehaviour, IInteractible
 
     public void Interact()
     {
-        GameManager.Instance.TurnOnLevel();
+        SceneManager.LoadScene(levelName);
     }
 }

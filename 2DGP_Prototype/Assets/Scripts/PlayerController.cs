@@ -23,10 +23,7 @@ public class PlayerController : MonoBehaviour
     {
         // movement
         myRigidbody2D.velocity = moveInput * speed;
-    }
 
-    private void FixedUpdate()
-    {
         // animations
         myAnimator.SetFloat("VerticalSpeed", myRigidbody2D.velocity.y);
         myAnimator.SetFloat("HorizontalSpeed", myRigidbody2D.velocity.x);
