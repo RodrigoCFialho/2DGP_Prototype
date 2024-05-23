@@ -42,17 +42,23 @@ public class NoteSpawner : MonoBehaviour
         for (int i = 0; i < NotesSpawned(); ++i)
         {
             yield return timetoWait;
+            GameManager.Instance.SpawnedNotesCounter();
             SpawnNote();
         }
     }
 
     private int NotesSpawned()
     {
-        return Random.Range(1, maxNotesSpawned+1);
+        return Random.Range(1, maxNotesSpawned + 1);
     }
 
     private void SpawnNote()
     {
         NoteController noteController = Instantiate(notePrefab, spawnPoint.position, spawnPoint.rotation);
+    }
+
+    public void Dismiss()
+    {
+        Destroy(gameObject);
     }
 }

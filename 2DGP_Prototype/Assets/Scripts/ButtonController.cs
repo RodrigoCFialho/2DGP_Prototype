@@ -7,14 +7,14 @@ public class ButtonController : MonoBehaviour
 {
     private NoteController noteController = null;
 
-    private BoxCollider2D boxCollider2D = null;
+    private BoxCollider2D myBoxCollider2D = null;
 
     [SerializeField]
     private float perfectHit = 0.10f;
 
     private void Awake()
     {
-        boxCollider2D = GetComponent<BoxCollider2D>();
+        myBoxCollider2D = GetComponent<BoxCollider2D>();
     }
 
     public void HitEvent()
@@ -24,12 +24,12 @@ public class ButtonController : MonoBehaviour
             GameManager.Instance.AddScore(-10f);
             UiManager.Instance.EnableMissText();
         }
-        else if (Mathf.Abs(noteController.transform.position.x - this.transform.position.x) <= (boxCollider2D.size.x * perfectHit))
+        else if (Mathf.Abs(noteController.transform.position.x - this.transform.position.x) <= (myBoxCollider2D.size.x * perfectHit))
         {
             noteController.iWasHitPerfect();
             noteController = null;
         }
-        else if (Mathf.Abs(noteController.transform.position.x - this.transform.position.x) <= boxCollider2D.size.x)
+        else if (Mathf.Abs(noteController.transform.position.x - this.transform.position.x) <= myBoxCollider2D.size.x)
         {
             noteController.iWasHit();
             noteController = null;
@@ -51,11 +51,5 @@ public class ButtonController : MonoBehaviour
         }
 
         noteController = null;
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.cyan;
-        Gizmos.DrawWireCube(transform.position, (boxCollider2D.size) * perfectHit);
     }
 }

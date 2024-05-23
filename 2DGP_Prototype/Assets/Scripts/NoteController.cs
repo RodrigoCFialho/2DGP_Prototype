@@ -10,6 +10,7 @@ public class NoteController : MonoBehaviour
     [SerializeField]
     public float noteValue = 5f;
 
+    [SerializeField]
     private float noteValuePerfect = 10f;
 
     [SerializeField]
@@ -28,15 +29,6 @@ public class NoteController : MonoBehaviour
     {
         // Make notes move to the left
         myRigidbody2D.velocity = new Vector2(-speed, myRigidbody2D.velocity.y);
-    }
-
-    // O Dismiss() dps deve ser chamado quando o jogador sair do nível pelo pause menu
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            Dismiss();
-        }
     }
 
     public void iWasHit()

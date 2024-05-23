@@ -44,6 +44,8 @@ public class UiManager : MonoBehaviour
     [SerializeField]
     private Sprite starActivated;
 
+    private Coroutine myCoroutine;
+
     private void Awake()
     {
         if (Instance != null)
@@ -62,7 +64,6 @@ public class UiManager : MonoBehaviour
         DisablePerfectText();
         DisableMissText();
 
-        // mudar o alpha
         for (int i = 0; i < star.Length; ++i)   
         {
             star[i].sprite = starDeactivated;
@@ -83,17 +84,14 @@ public class UiManager : MonoBehaviour
             {
                 DisableGoodText();
             }
-
-            if (isPerfectTextActive)
+            else if (isPerfectTextActive)
             {
                 DisablePerfectText() ;
             }
-
-            if (isMissTextActive)
+            else if (isMissTextActive)
             {
                 DisableMissText();
             }
-            
             break;
         }
     }
@@ -105,12 +103,12 @@ public class UiManager : MonoBehaviour
             feedbackText.gameObject.SetActive(true);
             isGoodTextActive = true;
             feedbackText.text = "GOOD";
-            StartCoroutine(UiTimer());
+            myCoroutine = StartCoroutine(UiTimer());
         }
         else
         {
-            StopCoroutine(UiTimer());
-            StartCoroutine(UiTimer());
+            StopCoroutine(myCoroutine);
+            myCoroutine = StartCoroutine(UiTimer());
         }
     }
 
@@ -127,12 +125,12 @@ public class UiManager : MonoBehaviour
             feedbackText.gameObject.SetActive(true);
             isPerfectTextActive = true;
             feedbackText.text = "PERFECT";
-            StartCoroutine(UiTimer());
+            myCoroutine = StartCoroutine(UiTimer());
         }
         else
         {
-            StopCoroutine(UiTimer());
-            StartCoroutine(UiTimer());
+            StopCoroutine(myCoroutine);
+            myCoroutine = StartCoroutine(UiTimer());
         }
     }
 
@@ -149,12 +147,12 @@ public class UiManager : MonoBehaviour
             feedbackText.gameObject.SetActive(true);
             isMissTextActive = true;
             feedbackText.text = "MISS";
-            StartCoroutine(UiTimer());
+            myCoroutine = StartCoroutine(UiTimer());
         }
         else
         {
-            StopCoroutine(UiTimer());
-            StartCoroutine(UiTimer());
+            StopCoroutine(myCoroutine);
+            myCoroutine = StartCoroutine(UiTimer());
         }
     }
 
@@ -188,16 +186,13 @@ public class UiManager : MonoBehaviour
         {
             star[0].sprite = starDeactivated;
         }
-
         if (score < star2Value && star[1].sprite == starActivated)
         {
             star[1].sprite = starDeactivated;
         }
-
         if (score < star3Value && star[2].sprite == starActivated)
         {
             star[2].sprite = starDeactivated;
         }
     }
-
 }
