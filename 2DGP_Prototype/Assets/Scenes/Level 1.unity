@@ -370,6 +370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   perfectHit: 0.1
+  soundFXSoundClip: {fileID: 8300000, guid: 327a086c33dd3e14e8101bc37350b596, type: 3}
 --- !u!212 &196851693
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4492,6 +4493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   perfectHit: 0.1
+  soundFXSoundClip: {fileID: 8300000, guid: 327a086c33dd3e14e8101bc37350b596, type: 3}
 --- !u!212 &2073357373
 SpriteRenderer:
   m_ObjectHideFlags: 0

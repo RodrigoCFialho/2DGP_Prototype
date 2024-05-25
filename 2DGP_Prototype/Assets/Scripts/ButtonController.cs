@@ -12,6 +12,9 @@ public class ButtonController : MonoBehaviour
     [SerializeField]
     private float perfectHit = 0.10f;
 
+    [SerializeField]
+    private AudioClip soundFXSoundClip;
+
     private void Awake()
     {
         myBoxCollider2D = GetComponent<BoxCollider2D>();
@@ -27,11 +30,13 @@ public class ButtonController : MonoBehaviour
         else if (Mathf.Abs(noteController.transform.position.x - this.transform.position.x) <= (myBoxCollider2D.size.x * perfectHit))
         {
             noteController.iWasHitPerfect();
+            SoundFXManager.Instance.PlaySoundFXClip(soundFXSoundClip, transform, 1f);
             noteController = null;
         }
         else if (Mathf.Abs(noteController.transform.position.x - this.transform.position.x) <= myBoxCollider2D.size.x)
         {
             noteController.iWasHit();
+            SoundFXManager.Instance.PlaySoundFXClip(soundFXSoundClip, transform, 1f);
             noteController = null;
         }
     }
