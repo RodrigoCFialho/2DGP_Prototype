@@ -234,6 +234,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelUI: {fileID: 9157716081570327603}
+  levelName: 
+  soundFXSoundClip: {fileID: 8300000, guid: 327a086c33dd3e14e8101bc37350b596, type: 3}
 --- !u!58 &1205976408586756785
 CircleCollider2D:
   m_ObjectHideFlags: 0

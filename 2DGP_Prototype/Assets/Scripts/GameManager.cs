@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private NoteSpawner[] noteSpawners;
 
+    [SerializeField]
+    private AudioClip musicSoundClip;
+
     private void Awake()
     {
         if (Instance != null)

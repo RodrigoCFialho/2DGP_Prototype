@@ -20,6 +20,9 @@ public class NoteController : MonoBehaviour
 
     public bool wasHit = false;
 
+    [SerializeField]
+    private AudioClip soundFXSoundClip;
+
     private void Awake()
     {
         myRigidbody2D = GetComponent<Rigidbody2D>();;
@@ -36,6 +39,7 @@ public class NoteController : MonoBehaviour
         wasHit = true;
         GameManager.Instance.AddScore(noteValue);
         UiManager.Instance.EnableGoodText();
+        SoundFXManager.Instance.PlaySoundFXClip(soundFXSoundClip, transform, 1f);
         Dismiss();
 
     }
@@ -52,6 +56,7 @@ public class NoteController : MonoBehaviour
         wasHit = true;
         GameManager.Instance.AddScore(noteValuePerfect);
         UiManager.Instance.EnablePerfectText();
+        SoundFXManager.Instance.PlaySoundFXClip(soundFXSoundClip, transform, 1f);
         Dismiss();
     }
 

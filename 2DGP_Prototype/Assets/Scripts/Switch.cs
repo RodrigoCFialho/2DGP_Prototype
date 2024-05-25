@@ -12,6 +12,9 @@ public class Switch : MonoBehaviour, IInteractible
     [SerializeField]
     private string levelName;
 
+    [SerializeField]
+    private AudioClip soundFXSoundClip;
+
     private void Start()
     {
         levelUI.SetActive(false);
@@ -39,6 +42,16 @@ public class Switch : MonoBehaviour, IInteractible
 
     public void Interact()
     {
+        SoundFXManager.Instance.PlaySoundFXClip(soundFXSoundClip, transform, 1f);
+
+        StartCoroutine(LoadSceneTimer());
+    }
+
+    private IEnumerator LoadSceneTimer()
+    {
+        WaitForSeconds timetoWait = new WaitForSeconds(soundFXSoundClip.length);
+
+        yield return timetoWait;
         SceneManager.LoadScene(levelName);
     }
 }

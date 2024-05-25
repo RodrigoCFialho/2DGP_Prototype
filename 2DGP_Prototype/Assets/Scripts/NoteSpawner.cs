@@ -20,6 +20,9 @@ public class NoteSpawner : MonoBehaviour
     [SerializeField]
     private float spawnWaitTime = 3f;
 
+    [SerializeField]
+    private AudioClip soundFXSoundClip;
+
     private void Start()
     {
         StartCoroutine(SpawnTimer());
@@ -55,6 +58,7 @@ public class NoteSpawner : MonoBehaviour
     private void SpawnNote()
     {
         NoteController noteController = Instantiate(notePrefab, spawnPoint.position, spawnPoint.rotation);
+        SoundFXManager.Instance.PlaySoundFXClip(soundFXSoundClip, transform, 1f);
     }
 
     public void Dismiss()
