@@ -86,4 +86,14 @@ public class InputSystem : MonoBehaviour
         moveInput = Vector2.zero;
         onEnableMovementEvent.Invoke(moveInput);
     }
+
+    public void DisablePlayerInputs()
+    {
+        customInput.Player.Disable();
+    }
+
+    public void EnablePlayerInputs()
+    {
+        customInput.Player.Enable();
+    }
 }

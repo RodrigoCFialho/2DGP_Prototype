@@ -65,16 +65,19 @@
     <Compile Include="Assets\Scripts\InputSystem.cs" />
     <Compile Include="Assets\Scripts\ButtonController.cs" />
     <Compile Include="Assets\CustomInput.cs" />
+    <Compile Include="Assets\Scripts\Managers\ButtonSelectionManager.cs" />
     <Compile Include="Assets\Scripts\NoteController.cs" />
+    <Compile Include="Assets\Scripts\Managers\InputManager.cs" />
     <Compile Include="Assets\Scripts\Switch.cs" />
+    <Compile Include="Assets\Scripts\Managers\SoundMixerManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\UiManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\CustomInputManager.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\UiManager.cs" />
-    <Compile Include="Assets\Scripts\CustomInputManager.cs" />
+    <Compile Include="Assets\Scripts\ButtonHandler.cs" />
+    <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
-    <Compile Include="Assets\Scripts\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\SoundManager.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\SoundMixerManager.cs" />
     <Compile Include="Assets\Scripts\NoteSpawner.cs" />
   </ItemGroup>
   <ItemGroup>
