@@ -53,7 +53,7 @@ public class NoteSpawner : MonoBehaviour
     private int NotesSpawned()
     {
         return Random.Range(1, maxNotesSpawned + 1);
-    }
+    } 
 
     private void SpawnNote()
     {
