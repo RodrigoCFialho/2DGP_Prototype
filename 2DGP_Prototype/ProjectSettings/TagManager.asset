@@ -42,11 +42,11 @@ TagManager:
   - name: Background
     uniqueID: 2431858959
     locked: 0
-  - name: Level Map Assets
-    uniqueID: 3008261075
-    locked: 0
   - name: Level Background
     uniqueID: 2934352817
+    locked: 0
+  - name: Level Map Assets
+    uniqueID: 3008261075
     locked: 0
   - name: Circle
     uniqueID: 640898435

@@ -30,6 +30,7 @@ public class SoundFXManager : MonoBehaviour
         audioSource.volume = volume;
 
         audioSource.Play();
+        //audioSource.PlayOneShot();
 
         float clipLength = audioSource.clip.length;
 

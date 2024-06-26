@@ -50,9 +50,11 @@ public class GameManager : MonoBehaviour
     public void AddScore(float noteValue)
     {
         // adding the score and making sure it can´t be lower than 0
-        if (score >= -noteValue)
+        score += noteValue;
+
+        if (score < 0f)
         {
-            score += noteValue;
+            score = 0f;
         }
 
         // can't go past 100
