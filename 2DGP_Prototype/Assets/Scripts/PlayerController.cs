@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using UnityEngine.Events;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,6 +12,9 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private float speed = 3f;
+
+    [SerializeField]
+    private UnityEvent OnFlipEvent;
 
     private void Awake()
     {
@@ -27,5 +30,25 @@ public class PlayerController : MonoBehaviour
         // animations
         myAnimator.SetFloat("VerticalSpeed", myRigidbody2D.velocity.y);
         myAnimator.SetFloat("HorizontalSpeed", myRigidbody2D.velocity.x);
+
+        CheckFlip(moveInput.x);
+    }
+
+    private void CheckFlip(float horizontalInput)
+    {
+        if (horizontalInput < 0f && transform.right.x > 0f)
+        {
+            Flip();
+        }
+        else if (horizontalInput > 0f && transform.right.x < 0f)
+        {
+            Flip();
+        }
+    }
+
+    private void Flip()
+    {
+        transform.right = -transform.right;
+        OnFlipEvent.Invoke();
     }
 }
