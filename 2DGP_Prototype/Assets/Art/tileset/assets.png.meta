@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6323f67927d58334daf40adb01659b17
+guid: 3a89a680714cab144bc480ef89bff27c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,190 +97,253 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TeclasSpritesheet_0
+      name: bush
       rect:
         serializedVersion: 2
-        x: 0
-        y: 512
-        width: 256
-        height: 256
+        x: 39
+        y: 855
+        width: 319
+        height: 126
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 351ce5baca6e9c345a30e43e49336937
-      internalID: 504262566
+      spriteID: e5ee7f0d708847f449e1f77cd120b2a6
+      internalID: -1675091304
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TeclasSpritesheet_1
+      name: boat
       rect:
         serializedVersion: 2
-        x: 256
-        y: 512
-        width: 256
-        height: 256
+        x: 897
+        y: 744
+        width: 336
+        height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: def521c016f3e4d49bb4634d1d6bc543
-      internalID: 1032292588
+      spriteID: 8c56b0c34f80a624881591e480b33e57
+      internalID: 378509404
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TeclasSpritesheet_2
+      name: appleGrove
       rect:
         serializedVersion: 2
-        x: 512
-        y: 512
-        width: 256
-        height: 256
+        x: 1364
+        y: 685
+        width: 663
+        height: 321
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e9fce9b9eabb9845a274dfff16b8b59
-      internalID: 1890766991
+      spriteID: f1feed7ee27624c47b33cc35e76ccdfe
+      internalID: 68092456
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TeclasSpritesheet_3
+      name: tree
       rect:
         serializedVersion: 2
-        x: 0
-        y: 256
-        width: 256
-        height: 256
+        x: 70
+        y: 483
+        width: 332
+        height: 335
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 322e37af51539a34da73b3341816dfac
-      internalID: -1024344614
+      spriteID: c66cffec00b697c42ae593747dea15a9
+      internalID: -1521793087
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TeclasSpritesheet_4
+      name: appleTree
       rect:
         serializedVersion: 2
-        x: 256
-        y: 256
-        width: 256
-        height: 256
+        x: 413
+        y: 487
+        width: 310
+        height: 313
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09a8ef2d9433e1940a4c438ab261a480
-      internalID: 1160033930
+      spriteID: 741a6314ec99b4444ab1789dcd3b7289
+      internalID: 995974445
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TeclasSpritesheet_5
+      name: levelStatue
       rect:
         serializedVersion: 2
-        x: 512
-        y: 256
-        width: 256
-        height: 256
+        x: 1064
+        y: 462
+        width: 195
+        height: 231
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4426d5ae1d8ac448a12a96c3cda3695
-      internalID: 1496391799
+      spriteID: 750b2a32a3bad1340be080b2895bf914
+      internalID: 772626129
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TeclasSpritesheet_6
+      name: pineForest
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 256
-        height: 256
+        x: 1273
+        y: 271
+        width: 763
+        height: 396
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4399a0a6d83fae14fa24b91be6837e9b
-      internalID: 341443740
+      spriteID: cdbbe358ffe590546851f42f81a566bf
+      internalID: 1443849317
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TeclasSpritesheet_7
+      name: assets_9
       rect:
         serializedVersion: 2
-        x: 256
-        y: 0
-        width: 256
-        height: 256
+        x: 862
+        y: 473
+        width: 79
+        height: 205
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e5e3b1a0fbad494b8a4741b351e1a61
-      internalID: -529419572
+      spriteID: 12b9b3f9f52a2f040ae2ee0c62bada84
+      internalID: -1751781052
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TeclasSpritesheet_8
+      name: lighthouse
       rect:
         serializedVersion: 2
-        x: 512
-        y: 0
-        width: 256
-        height: 256
+        x: 35
+        y: 28
+        width: 150
+        height: 414
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4159227dc45d4e41abfdfc3fcac8013
-      internalID: 1905604158
+      spriteID: 99cf6039af0d5f04e9b2b3af352ca75e
+      internalID: -1726076902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pineTree
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 38
+        width: 332
+        height: 361
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 034979774c1c9c547b75441e7e259847
+      internalID: 1779654160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets_13
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 39
+        width: 206
+        height: 403
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a0510a4da1d9d942a729f330609cb3f
+      internalID: 1746558554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lake
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 30
+        width: 474
+        height: 334
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0454a5e0de32b414eb992d1a1066ae64
+      internalID: -2081340662
       vertices: []
       indices: 
       edges: []
@@ -296,15 +359,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TeclasSpritesheet_0: 504262566
-      TeclasSpritesheet_1: 1032292588
-      TeclasSpritesheet_2: 1890766991
-      TeclasSpritesheet_3: -1024344614
-      TeclasSpritesheet_4: 1160033930
-      TeclasSpritesheet_5: 1496391799
-      TeclasSpritesheet_6: 341443740
-      TeclasSpritesheet_7: -529419572
-      TeclasSpritesheet_8: 1905604158
+      appleGrove: 68092456
+      appleTree: 995974445
+      assets_10: -1039281433
+      assets_13: 1746558554
+      assets_5: 885852927
+      assets_8: -809306143
+      assets_9: -1751781052
+      boat: 378509404
+      bush: -1675091304
+      lake: -2081340662
+      levelStatue: 772626129
+      lighthouse: -1726076902
+      pineForest: 1443849317
+      pineTree: 1779654160
+      tree: -1521793087
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

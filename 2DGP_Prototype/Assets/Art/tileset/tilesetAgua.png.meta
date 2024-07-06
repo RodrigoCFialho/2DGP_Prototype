@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6323f67927d58334daf40adb01659b17
+guid: aafb29e859582fd4e87d6db797889e61
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,91 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TeclasSpritesheet_0
+      name: tilesetAgua_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de328742c8be92c44a76f598414d5f40
+      internalID: 517981109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesetAgua_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8026caa2551ff264bafe81b8d0aeb5ab
+      internalID: -1243221625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesetAgua_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81ac6e0bca0c01e4f849ac30f88765ff
+      internalID: 603032960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesetAgua_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6fc58266523a8e4f921772cc25f1080
+      internalID: -242530477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesetAgua_4
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 351ce5baca6e9c345a30e43e49336937
-      internalID: 504262566
+      spriteID: c2c5272914570044da9fc3fe8b424b02
+      internalID: -135211428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TeclasSpritesheet_1
+      name: tilesetAgua_5
       rect:
         serializedVersion: 2
         x: 256
@@ -132,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: def521c016f3e4d49bb4634d1d6bc543
-      internalID: 1032292588
+      spriteID: 9e059ceed66cc404da15452652192eef
+      internalID: 1971534932
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TeclasSpritesheet_2
+      name: tilesetAgua_6
       rect:
         serializedVersion: 2
         x: 512
@@ -153,14 +237,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e9fce9b9eabb9845a274dfff16b8b59
-      internalID: 1890766991
+      spriteID: 95ab79f65ef27344d9c5fa7b5ee054e0
+      internalID: 251326652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TeclasSpritesheet_3
+      name: tilesetAgua_7
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a6bef5da9d8feb468cd7f08b373f69c
+      internalID: -499338232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesetAgua_8
       rect:
         serializedVersion: 2
         x: 0
@@ -174,14 +279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 322e37af51539a34da73b3341816dfac
-      internalID: -1024344614
+      spriteID: 489e7d82bf6c4784987316774969dd12
+      internalID: 240008982
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TeclasSpritesheet_4
+      name: tilesetAgua_9
       rect:
         serializedVersion: 2
         x: 256
@@ -195,14 +300,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09a8ef2d9433e1940a4c438ab261a480
-      internalID: 1160033930
+      spriteID: d4f3c70ea399b9a4db4f6ac05f8e7866
+      internalID: 634060407
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TeclasSpritesheet_5
+      name: tilesetAgua_10
       rect:
         serializedVersion: 2
         x: 512
@@ -216,14 +321,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4426d5ae1d8ac448a12a96c3cda3695
-      internalID: 1496391799
+      spriteID: 2d925cd53062b874398682777c7a5816
+      internalID: 940303881
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TeclasSpritesheet_6
+      name: tilesetAgua_11
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af5468b0b6843a4491f8c8b74c1fd9e
+      internalID: -1184948146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesetAgua_12
       rect:
         serializedVersion: 2
         x: 0
@@ -237,14 +363,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4399a0a6d83fae14fa24b91be6837e9b
-      internalID: 341443740
+      spriteID: 9af82946a86b1d24885b51cfd7da6d04
+      internalID: -143165278
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TeclasSpritesheet_7
+      name: tilesetAgua_13
       rect:
         serializedVersion: 2
         x: 256
@@ -258,14 +384,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e5e3b1a0fbad494b8a4741b351e1a61
-      internalID: -529419572
+      spriteID: 26fcaaa0392b60744b9abfff6312d76f
+      internalID: 1663310939
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TeclasSpritesheet_8
+      name: tilesetAgua_14
       rect:
         serializedVersion: 2
         x: 512
@@ -279,8 +405,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4159227dc45d4e41abfdfc3fcac8013
-      internalID: 1905604158
+      spriteID: 310d2698716393346bbc25e1b75f7b16
+      internalID: -488003547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesetAgua_15
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d3b457d47d3e03419beb4f0971930e2
+      internalID: -193829241
       vertices: []
       indices: 
       edges: []
@@ -296,15 +443,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TeclasSpritesheet_0: 504262566
-      TeclasSpritesheet_1: 1032292588
-      TeclasSpritesheet_2: 1890766991
-      TeclasSpritesheet_3: -1024344614
-      TeclasSpritesheet_4: 1160033930
-      TeclasSpritesheet_5: 1496391799
-      TeclasSpritesheet_6: 341443740
-      TeclasSpritesheet_7: -529419572
-      TeclasSpritesheet_8: 1905604158
+      tilesetAgua_0: 517981109
+      tilesetAgua_1: -1243221625
+      tilesetAgua_10: 940303881
+      tilesetAgua_11: -1184948146
+      tilesetAgua_12: -143165278
+      tilesetAgua_13: 1663310939
+      tilesetAgua_14: -488003547
+      tilesetAgua_15: -193829241
+      tilesetAgua_2: 603032960
+      tilesetAgua_3: -242530477
+      tilesetAgua_4: -135211428
+      tilesetAgua_5: 1971534932
+      tilesetAgua_6: 251326652
+      tilesetAgua_7: -499338232
+      tilesetAgua_8: 240008982
+      tilesetAgua_9: 634060407
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

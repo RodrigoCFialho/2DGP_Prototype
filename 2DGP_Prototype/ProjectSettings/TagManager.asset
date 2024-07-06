@@ -39,8 +39,11 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background
+  - name: BackgroundTile
     uniqueID: 2431858959
+    locked: 0
+  - name: BackgroundAsset
+    uniqueID: 1429608833
     locked: 0
   - name: Level Background
     uniqueID: 2934352817
