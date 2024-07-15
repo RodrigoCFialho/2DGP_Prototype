@@ -3,68 +3,32 @@
   "WorkspaceRootPath": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|d:\\github\\unity\\2dgp_prototype\\2dgp_prototype\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\assets\\scripts\\buttonhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\buttonhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|d:\\github\\unity\\2dgp_prototype\\2dgp_prototype\\assets\\keyscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|solutionrelative:assets\\keyscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\assets\\scripts\\inputsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inputsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\assets\\scripts\\managers\\buttonselectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\buttonselectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\assets\\scripts\\buttoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\buttoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\assets\\scripts\\switch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\switch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\assets\\scripts\\managers\\soundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\soundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\assets\\scripts\\managers\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|d:\\github\\unity\\2dgp_prototype\\2dgp_prototype\\assets\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
+      "RelativeMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|solutionrelative:assets\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\assets\\scripts\\notespawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\notespawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\assets\\scripts\\buttonhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\buttonhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\assets\\scripts\\switch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\switch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\assets\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\assets\\scripts\\interactionsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interactionsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\assets\\scripts\\notecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\notecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\assets\\scripts\\managers\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\EventSystem\\UIBehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\EventSystem\\UIBehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\rodri\\documents\\github\\2d-project-2024\\2dgp_prototype\\assets\\pausemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\Documents\\GitHub\\2D-Project-2024\\2DGP_Prototype\\assets\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\Documents\\GitHub\\2D-Project-2024\\2DGP_Prototype\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodri\\Documents\\GitHub\\2D-Project-2024\\2DGP_Prototype\\assets\\scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\assets\\scripts\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9FE8D60-92B4-CC61-19A9-12FA9B457E7A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,206 +38,97 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "KeysController.cs",
-              "DocumentMoniker": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\KeysController.cs",
-              "RelativeDocumentMoniker": "Assets\\KeysController.cs",
-              "ToolTip": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\KeysController.cs",
-              "RelativeToolTip": "Assets\\KeysController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T20:57:36.189Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PlayerController.cs",
-              "DocumentMoniker": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\PlayerController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
-              "ToolTip": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\PlayerController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T20:15:11.971Z",
+              "Title": "ClassDiagram1.cd",
+              "DocumentMoniker": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\ClassDiagram1.cd",
+              "RelativeDocumentMoniker": "Assets\\ClassDiagram1.cd",
+              "ToolTip": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\ClassDiagram1.cd",
+              "RelativeToolTip": "Assets\\ClassDiagram1.cd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
+              "WhenOpened": "2024-07-15T21:37:07.148Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "InputSystem.cs",
-              "DocumentMoniker": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\InputSystem.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\InputSystem.cs",
-              "ToolTip": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\InputSystem.cs",
-              "RelativeToolTip": "Assets\\Scripts\\InputSystem.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAowEIAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T15:40:48.737Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ButtonSelectionManager.cs",
-              "DocumentMoniker": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\Managers\\ButtonSelectionManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\ButtonSelectionManager.cs",
-              "ToolTip": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\Managers\\ButtonSelectionManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Managers\\ButtonSelectionManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T15:25:33.23Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ButtonHandler.cs",
-              "DocumentMoniker": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\ButtonHandler.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ButtonHandler.cs",
-              "ToolTip": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\ButtonHandler.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ButtonHandler.cs",
-              "ViewState": "AQIAAEQAAAAAAAAAAAAgwFkAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T14:43:58.256Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "InputManager.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\Documents\\GitHub\\2D-Project-2024\\2DGP_Prototype\\Assets\\InputManager.cs",
-              "ToolTip": "C:\\Users\\rodri\\Documents\\GitHub\\2D-Project-2024\\2DGP_Prototype\\Assets\\InputManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T13:36:24.945Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MainMenu.cs",
-              "DocumentMoniker": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\MainMenu.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenu.cs",
-              "ToolTip": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\MainMenu.cs",
-              "RelativeToolTip": "Assets\\Scripts\\MainMenu.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T13:09:03.547Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UiManager.cs",
-              "DocumentMoniker": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\Managers\\UiManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\UiManager.cs",
-              "ToolTip": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\Managers\\UiManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Managers\\UiManager.cs",
-              "ViewState": "AQIAAFMAAAAAAAAAAAAIwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T17:58:34.875Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "GameManager.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\Documents\\GitHub\\2D-Project-2024\\2DGP_Prototype\\Assets\\Scripts\\GameManager.cs",
-              "ToolTip": "C:\\Users\\rodri\\Documents\\GitHub\\2D-Project-2024\\2DGP_Prototype\\Assets\\Scripts\\GameManager.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABoAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T12:49:31.063Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "NoteSpawner.cs",
               "DocumentMoniker": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\NoteSpawner.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\NoteSpawner.cs",
               "ToolTip": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\NoteSpawner.cs",
               "RelativeToolTip": "Assets\\Scripts\\NoteSpawner.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwEEAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T14:37:38.581Z"
+              "WhenOpened": "2024-07-15T21:32:20.564Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "UiManager.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\Documents\\GitHub\\2D-Project-2024\\2DGP_Prototype\\Assets\\Scripts\\UiManager.cs",
-              "ToolTip": "C:\\Users\\rodri\\Documents\\GitHub\\2D-Project-2024\\2DGP_Prototype\\Assets\\Scripts\\UiManager.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAQwDYAAAAMAAAA",
+              "DocumentIndex": 0,
+              "Title": "ButtonHandler.cs",
+              "DocumentMoniker": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\ButtonHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ButtonHandler.cs",
+              "ToolTip": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\ButtonHandler.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ButtonHandler.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAowAIAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T12:41:55.267Z"
+              "WhenOpened": "2024-07-15T21:27:16.746Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ButtonController.cs",
-              "DocumentMoniker": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\ButtonController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ButtonController.cs",
-              "ToolTip": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\ButtonController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ButtonController.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwA8AAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T16:26:54.873Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SoundManager.cs",
-              "DocumentMoniker": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\Managers\\SoundManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\SoundManager.cs",
-              "ToolTip": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\Managers\\SoundManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Managers\\SoundManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T13:57:08.579Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Switch.cs",
               "DocumentMoniker": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\Switch.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Switch.cs",
               "ToolTip": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\Switch.cs",
               "RelativeToolTip": "Assets\\Scripts\\Switch.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwA8AAAAnAAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAowDYAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T13:07:11.819Z"
+              "WhenOpened": "2024-05-23T13:07:11.819Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "NoteController.cs",
-              "DocumentMoniker": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\NoteController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\NoteController.cs",
-              "ToolTip": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\NoteController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\NoteController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T16:27:10.71Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UIBehaviour.cs",
-              "DocumentMoniker": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\EventSystem\\UIBehaviour.cs",
-              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\EventSystem\\UIBehaviour.cs",
-              "ToolTip": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\EventSystem\\UIBehaviour.cs",
-              "RelativeToolTip": "Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\EventSystem\\UIBehaviour.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAABsAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T15:43:54.105Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "PauseMenu.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\Documents\\GitHub\\2D-Project-2024\\2DGP_Prototype\\Assets\\PauseMenu.cs",
-              "ToolTip": "C:\\Users\\rodri\\Documents\\GitHub\\2D-Project-2024\\2DGP_Prototype\\Assets\\PauseMenu.cs",
+              "DocumentIndex": 4,
+              "Title": "InteractionSystem.cs",
+              "DocumentMoniker": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\InteractionSystem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\InteractionSystem.cs",
+              "ToolTip": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\InteractionSystem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\InteractionSystem.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T13:10:57.997Z"
+              "WhenOpened": "2024-07-15T21:23:51.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UiManager.cs",
+              "DocumentMoniker": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\Managers\\UiManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\UiManager.cs",
+              "ToolTip": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\Managers\\UiManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Managers\\UiManager.cs",
+              "ViewState": "AQIAALoAAAAAAAAAAAAswNYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T20:59:31.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\Managers\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\GameManager.cs",
+              "ToolTip": "D:\\Github\\Unity\\2DGP_Prototype\\2DGP_Prototype\\Assets\\Scripts\\Managers\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Managers\\GameManager.cs",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAcwGcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T20:46:56.068Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -1,6 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,6 +20,17 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private AudioClip musicSoundClip;
+
+    [SerializeField]
+    private NoteSpawner noteSpawnerUpPrefab;
+
+    [SerializeField]
+    private NoteSpawner noteSpawnerDownPrefab;
+
+    private NoteController[] notesInTheScene;
+
+    [SerializeField]
+    private UnityEvent onLevelCompleteEvent;
 
     private void Awake()
     {
@@ -39,12 +51,30 @@ public class GameManager : MonoBehaviour
 
     public void Pause()
     {
-        Time.timeScale = 0f;
+        for (int i = 0; i < noteSpawners.Length; ++i)
+        {
+            noteSpawners[i].StopSpawning();
+        }
+
+        notesInTheScene = FindObjectsOfType<NoteController>();
+
+        for (int i = 0; i < notesInTheScene.Length; ++i)
+        {
+            notesInTheScene[i].StopMoving();
+        }
     }
 
     public void Unpause()
     {
-        Time.timeScale = 1f;
+        for (int i = 0; i < noteSpawners.Length; ++i)
+        {
+            noteSpawners[i].StartSpawning();
+        }
+
+        for (int i = 0; i < notesInTheScene.Length; ++i)
+        {
+            notesInTheScene[i].ContinueMoving();
+        }
     }
 
     public void AddScore(float noteValue)
@@ -72,12 +102,7 @@ public class GameManager : MonoBehaviour
 
         if (spawnCounter == 0)
         {
-            for (int i = 0; i < noteSpawners.Length; ++i)
-            {
-                noteSpawners[i].Dismiss();
-            }
+            onLevelCompleteEvent.Invoke();
         }
-
-        print(spawnCounter);
     }
 }

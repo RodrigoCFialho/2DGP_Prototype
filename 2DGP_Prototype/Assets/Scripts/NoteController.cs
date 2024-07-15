@@ -7,6 +7,8 @@ public class NoteController : MonoBehaviour
 {
     private Rigidbody2D myRigidbody2D = null;
 
+    private Animator myAnimator;
+
     [SerializeField]
     public float noteValue = 5f;
 
@@ -22,7 +24,8 @@ public class NoteController : MonoBehaviour
 
     private void Awake()
     {
-        myRigidbody2D = GetComponent<Rigidbody2D>();;
+        myRigidbody2D = GetComponent<Rigidbody2D>();
+        myAnimator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -55,9 +58,24 @@ public class NoteController : MonoBehaviour
         Dismiss();
     }
 
-    // Destroy the Note
     private void Dismiss()
     {
+        myAnimator.enabled = true;
+    }
+
+    //Called by animation event
+    public void DestroyGameObject()
+    {
         Destroy(gameObject);
+    }
+
+    public void StopMoving()
+    {
+        myRigidbody2D.velocity = new Vector2(0f, myRigidbody2D.velocity.y);
+    }
+
+    public void ContinueMoving()
+    {
+        myRigidbody2D.velocity = new Vector2(-speed, myRigidbody2D.velocity.y);
     }
 }

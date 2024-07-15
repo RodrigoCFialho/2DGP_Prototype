@@ -15,6 +15,9 @@ public class ButtonController : MonoBehaviour
     [SerializeField]
     private AudioClip soundFXSoundClip;
 
+    [SerializeField]
+    private float missScore = -5f;
+
     private void Awake()
     {
         myBoxCollider2D = GetComponent<BoxCollider2D>();
@@ -24,7 +27,7 @@ public class ButtonController : MonoBehaviour
     {
         if (noteController == null)
         {
-            GameManager.Instance.AddScore(-10f);
+            GameManager.Instance.AddScore(missScore);
             UiManager.Instance.EnableMissText();
         }
         else if (Mathf.Abs(noteController.transform.position.x - this.transform.position.x) <= (myBoxCollider2D.size.x * perfectHit))
@@ -50,7 +53,7 @@ public class ButtonController : MonoBehaviour
     // Note exits the collider and is dismissed
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (!noteController.wasHit)
+        if (noteController != null && !noteController.wasHit)
         {
             noteController.iWasNotHit();
         }

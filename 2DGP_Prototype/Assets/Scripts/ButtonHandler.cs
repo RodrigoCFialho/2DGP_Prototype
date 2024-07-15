@@ -1,25 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Timeline.Actions;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class ButtonHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ISelectHandler, IDeselectHandler
 {
-    [SerializeField]
-    private float verticalMoveAmount = 30f;
+    [SerializeField] private float verticalMoveAmount = 30f;
 
-    [SerializeField]
-    private float moveTime = 0.1f;
+    [SerializeField] private float moveTime = 0.1f;
 
-    [Range(0f, 2f), SerializeField]
-    private float scaleAmount = 1.1f;
+    [Range(0f, 2f), SerializeField] private float scaleAmount = 1.1f;
 
     private Vector3 initialPosition;
     private Vector3 initialScale;
 
-    [SerializeField]
-    private ButtonSelectionManager buttonSelectionManager;
+    [SerializeField] private ButtonSelectionManager buttonSelectionManager;
+
+    [SerializeField] private AudioSource SelectedSoundFX;
+    [SerializeField] private AudioSource PressedSoundFX;
+
+    [SerializeField] UnityEvent OnPressEvent;
 
     private void Start()
     {
@@ -79,6 +82,8 @@ public class ButtonHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
         buttonSelectionManager.LastSelected = gameObject;
 
+        SelectedSoundFX.Play();
+
         for (int i = 0; i < buttonSelectionManager.Buttons.Length; i++)
         {
             if (buttonSelectionManager.Buttons[i] == gameObject)
@@ -92,5 +97,20 @@ public class ButtonHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public void OnDeselect(BaseEventData eventData)
     {
         StartCoroutine(MoveButton(false));
+    }
+
+    public void Pressed()
+    {
+        PressedSoundFX.Play();
+
+        StartCoroutine(LoadMenuTimer());
+    }
+
+    private IEnumerator LoadMenuTimer()
+    {
+        WaitForSeconds timetoWait = new WaitForSeconds(PressedSoundFX.clip.length);
+
+        yield return timetoWait;
+        OnPressEvent.Invoke();
     }
 }

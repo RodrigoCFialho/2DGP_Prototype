@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6396959194588724331}
   - component: {fileID: 1987217252427484757}
   - component: {fileID: -5060661078870597828}
+  - component: {fileID: 1068088985103602646}
   m_Layer: 6
   m_Name: NoteUp
   m_TagString: Note
@@ -128,7 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noteValue: 1
   noteValuePerfect: 2
-  speed: 2
+  speed: 1.5
   canHitNote: 0
   wasHit: 0
 --- !u!61 &-5060661078870597828
@@ -176,3 +177,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2575336, y: 1.7153406}
   m_EdgeRadius: 0
+--- !u!95 &1068088985103602646
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3969954565691551112}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9608a197c6b9e04f9a9c11d3dd34c12, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

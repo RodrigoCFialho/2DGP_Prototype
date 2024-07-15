@@ -13,7 +13,7 @@ public class Switch : MonoBehaviour, IInteractible
     private string levelName;
 
     [SerializeField]
-    private AudioClip soundFXSoundClip;
+    private AudioSource soundFX;
 
     private void Start()
     {
@@ -42,14 +42,14 @@ public class Switch : MonoBehaviour, IInteractible
 
     public void Interact()
     {
-        SoundFXManager.Instance.PlaySoundFXClip(soundFXSoundClip, transform, 1f);
+        soundFX.Play();
 
         StartCoroutine(LoadSceneTimer());
     }
 
     private IEnumerator LoadSceneTimer()
     {
-        WaitForSeconds timetoWait = new WaitForSeconds(soundFXSoundClip.length);
+        WaitForSeconds timetoWait = new WaitForSeconds(soundFX.clip.length);
 
         yield return timetoWait;
         SceneManager.LoadScene(levelName);

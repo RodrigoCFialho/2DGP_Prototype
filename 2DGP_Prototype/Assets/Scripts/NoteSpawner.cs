@@ -23,9 +23,12 @@ public class NoteSpawner : MonoBehaviour
     [SerializeField]
     private AudioClip soundFXSoundClip;
 
+    [SerializeField]
+    private Animator enemyBirdAnimator;
+
     private void Start()
     {
-        StartCoroutine(SpawnTimer());
+        StartSpawning();
     }
 
     private IEnumerator SpawnTimer()
@@ -59,10 +62,22 @@ public class NoteSpawner : MonoBehaviour
     {
         NoteController noteController = Instantiate(notePrefab, spawnPoint.position, spawnPoint.rotation);
         SoundFXManager.Instance.PlaySoundFXClip(soundFXSoundClip, transform, 1f);
+
+        enemyBirdAnimator.SetTrigger("NoteSpawned");
     }
 
     public void Dismiss()
     {
         Destroy(gameObject);
+    }
+
+    public void StopSpawning()
+    {
+        StopAllCoroutines();
+    }
+
+    public void StartSpawning()
+    {
+        StartCoroutine(SpawnTimer());
     }
 }

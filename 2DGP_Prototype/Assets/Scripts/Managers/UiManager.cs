@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
@@ -45,6 +46,9 @@ public class UiManager : MonoBehaviour
     private Sprite starActivated;
 
     private Coroutine myCoroutine;
+
+    [SerializeField]
+    private Image[] starLevelComplete;
 
     private void Awake()
     {
@@ -167,32 +171,47 @@ public class UiManager : MonoBehaviour
         //Updating score text
         scoreText.text = score + "%";
 
+        Animator star0Animator = star[0].gameObject.GetComponent<Animator>();
+        Animator star1Animator = star[1].gameObject.GetComponent<Animator>();
+        Animator star2Animator = star[2].gameObject.GetComponent<Animator>();
+
         // Activating the stars' initial colors
         if (star1Value <= score && score < star2Value && star[0].sprite == starDeactivated)
         {
+            star0Animator.enabled = true;
             star[0].sprite = starActivated;
         }
         else if (score < star3Value && star[1].sprite == starDeactivated)
         {
+            star1Animator.enabled = true;
             star[1].sprite = starActivated;
         }
         else if (star[2].sprite == starDeactivated)
         {
+            star2Animator.enabled = true;
             star[2].sprite = starActivated;
         }
 
         // Deactivating the stars' initial colors to the low alpha variants
         if (score < star1Value && star[0].sprite == starActivated)
         {
+            star0Animator.enabled = false;
             star[0].sprite = starDeactivated;
         }
         if (score < star2Value && star[1].sprite == starActivated)
         {
+            star1Animator.enabled = false;
             star[1].sprite = starDeactivated;
         }
         if (score < star3Value && star[2].sprite == starActivated)
         {
+            star2Animator.enabled = true;
             star[2].sprite = starDeactivated;
         }
+    }
+
+    public void LevelComplete()
+    {
+
     }
 }
